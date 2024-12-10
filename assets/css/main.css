@@ -1,17 +1,17 @@
 /* Fonts */
 :root {
-  --default-font: "Google Sans",arial,sans-serif;
+  --default-font: "Noto Sans", sans-serif;
   --default-font1: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --heading-font: "Noto Sans", sans-serif;
+  --nav-font: "Noto Sans", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #312b7d; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #312b7d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #262161; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #312b7d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -1291,6 +1291,7 @@ section,
   height: 100%;
   padding: 40px 30px;
   border-radius: 10px;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
 }
 
 .features-cards .feature-box i {
@@ -1313,33 +1314,22 @@ section,
   margin-bottom: 0;
 }
 
-.features-cards .feature-box.orange {
-  background-color: #fff3e2;
-}
 
 .features-cards .feature-box.orange i {
   color: #edb86e;
 }
 
-.features-cards .feature-box.blue {
-  background-color: #deedfd;
-}
 
 .features-cards .feature-box.blue i {
   color: #20a5f8;
 }
 
-.features-cards .feature-box.green {
-  background-color: #d5f1e4;
-}
+
 
 .features-cards .feature-box.green i {
   color: #48c88a;
 }
 
-.features-cards .feature-box.red {
-  background-color: #fdeded;
-}
 
 .features-cards .feature-box.red i {
   color: #f28484;
@@ -1983,6 +1973,8 @@ section,
   border-radius: 1rem;
   transition: all 0.3s ease;
   position: relative;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pricing .pricing-card:hover {
@@ -2161,7 +2153,7 @@ section,
 
     .swiper-button-next:hover,
     .swiper-button-prev:hover {
-      color: var(--contrast-color); /* Highlight on hover */
+      color: var(--nav-hover-color); /* Highlight on hover */
     }
 
     /* Swiper Pagination Bullets */
