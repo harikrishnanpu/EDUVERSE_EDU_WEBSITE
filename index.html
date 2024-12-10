@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Eduverse Education</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+      <!-- Swiper CSS -->
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    
+    <!-- AOS CSS (If Used) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+
+  <style>
+    /* Courses Section styles */
+    .courses-section {
+      padding: 60px 0;
+      background: #f7f7f7;
+    }
+    .courses-section .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .courses-section .swiper-slide {
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .courses-section .swiper-slide img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .courses-section .course-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .courses-section .course-desc {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .courses-section .view-more-btn {
+      background: #0077ff;
+      color:#fff;
+      padding:0.5rem 1rem;
+      border-radius:4px;
+      font-size:0.9rem;
+      text-decoration:none;
+    }
+    .courses-section .view-more-btn:hover {
+      background:#005bb5;
+    }
+
+    /* Typed text styling in hero and stats */
+    .typed-text {
+      color: #0077ff;
+      font-weight: 600;
+    }
+    .stats-subtitle {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight:600;
+      color: #333;
+    }
+
+    /* Parallax about section */
+    #about {
+      background: url('assets/img/about-5.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* Adjusted padding to ensure text readability in about section */
+    #about .container {
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      padding: 40px;
+    }
+
+    /* Typed text styling */
+.typed-text {
+  font-weight: 600;
+}
+
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.svg" alt="">
+        <!-- <h1 class="sitename">Eduverse Education</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Our Courses</a></li>
+          <li><a href="#services">Why Us?</a></li>
+          <li><a href="#pricing">testimonials</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div>
+        <a class="btn-getstarted" href="index.html#about"> <i style="margin-right: 4px;" class="fa fa-phone"></i>Contact Us</a>
+        <a class="btn-getstarted" href="index.html#about">Apply Now</a>
+      </div>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="swiper hero-swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+    
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="hero-content">
+                    <div class="company-badge mb-4">
+                      <i class="bi bi-gear-fill fa-spin me-2"></i>
+                      Empowering Your Future
+                    </div>
+    
+                    <h1 class="mb-4">
+                      Join the<br>
+                      Leaders of Tomorrow <br>
+                      <span class="accent-text">Shape Your Future</span><br>
+                      <span class="typed-text" id="typed-hero-1"></span>
+                    </h1>
+    
+                    <p class="mb-4 mb-md-5">
+                      Discover your potential at Eduverse. With state-of-the-art facilities, world-class faculty, and a thriving student community, your journey to success begins here.
+                    </p>
+    
+                    <div class="hero-buttons">
+                      <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
+                      <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
+                        <i class="bi bi-play-circle me-1"></i>
+                        Watch Campus Tour
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/bg-1.avif" alt="Campus Image" class="img-fluid">
+                    <div class="customers-badge">
+                      <div class="customer-avatars">
+                        <img src="assets/img/avatar-1.webp" alt="Student 1" class="avatar">
+                        <img src="assets/img/avatar-2.webp" alt="Student 2" class="avatar">
+                        <img src="assets/img/avatar-3.webp" alt="Student 3" class="avatar">
+                        <img src="assets/img/avatar-4.webp" alt="Student 4" class="avatar">
+                        <img src="assets/img/avatar-5.webp" alt="Student 5" class="avatar">
+                        <span class="avatar more">12k+</span>
+                      </div>
+                      <p class="mb-0 mt-2">Join a thriving community of 12,000+ students.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="hero-content">
+                    <div class="company-badge mb-4">
+                      <i class="bi bi-gear-fill fa-spin me-2"></i>
+                      Achieve Academic Excellence
+                    </div>
+    
+                    <h1 class="mb-4">
+                      Explore<br>
+                      Innovative Learning<br>
+                      <span class="accent-text">At Eduverse</span><br>
+                      <span class="typed-text" id="typed-hero-2"></span>
+                    </h1>
+    
+                    <p class="mb-4 mb-md-5">
+                      Experience cutting-edge education with access to global resources, research opportunities, and a network of industry leaders.
+                    </p>
+    
+                    <div class="hero-buttons">
+                      <a href="#programs" class="btn btn-primary me-0 me-sm-2 mx-1">Explore Programs</a>
+                      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
+                        <i class="bi bi-play-circle me-1"></i>
+                        Student Success Stories
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/bg-2.avif" alt="Campus Life Image" class="img-fluid">
+                    <div class="customers-badge">
+                      <div class="customer-avatars">
+                        <img src="assets/img/avatar-1.webp" alt="Student 1" class="avatar">
+                        <img src="assets/img/avatar-2.webp" alt="Student 2" class="avatar">
+                        <img src="assets/img/avatar-3.webp" alt="Student 3" class="avatar">
+                        <img src="assets/img/avatar-4.webp" alt="Student 4" class="avatar">
+                        <img src="assets/img/avatar-5.webp" alt="Student 5" class="avatar">
+                        <span class="avatar more">15k+</span>
+                      </div>
+                      <p class="mb-0 mt-2">Be part of a vibrant campus life.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="hero-content">
+                    <div class="company-badge mb-4">
+                      <i class="bi bi-gear-fill fa-spin me-2"></i>
+                      Innovation & Leadership
+                    </div>
+    
+                    <h1 class="mb-4">
+                      Shape Your<br>
+                      Career<br>
+                      <span class="accent-text">With Eduverse</span><br>
+                      <span class="typed-text" id="typed-hero-3"></span>
+                    </h1>
+    
+                    <p class="mb-4 mb-md-5">
+                      Unlock your potential through world-class education and join a global network of professionals and innovators.
+                    </p>
+    
+                    <div class="hero-buttons">
+                      <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Learn More</a>
+                      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
+                        <i class="bi bi-play-circle me-1"></i>
+                        Watch Our Story
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/bg-1.avif" alt="Global Learning Image" class="img-fluid">
+                    <div class="customers-badge">
+                      <div class="customer-avatars">
+                        <img src="assets/img/avatar-1.webp" alt="Student 1" class="avatar">
+                        <img src="assets/img/avatar-2.webp" alt="Student 2" class="avatar">
+                        <img src="assets/img/avatar-3.webp" alt="Student 3" class="avatar">
+                        <img src="assets/img/avatar-4.webp" alt="Student 4" class="avatar">
+                        <img src="assets/img/avatar-5.webp" alt="Student 5" class="avatar">
+                        <span class="avatar more">20k+</span>
+                      </div>
+                      <p class="mb-0 mt-2">Learn and grow with global peers.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+        <section id="stats" class="stats section">
+          <div class="container" data-aos="fade-up" data-aos-delay="500">
+            <div class="row stats-row gy-4">
+              <!-- Stats Item 1 -->
+              <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h4>
+                      <span class="purecounter" data-purecounter-start="0" data-purecounter-end="3000" data-purecounter-duration="4"></span>x Won Awards
+                    </h4>
+                    <p class="mb-0">Successfully Trained</p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+        
+              <!-- Stats Item 2 -->
+              <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-user-graduate"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h4>
+                      <span class="purecounter" data-purecounter-start="0" data-purecounter-end="7000" data-purecounter-duration="4"></span>+ community
+                    </h4>
+                    <p class="mb-0">Students Community</p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+        
+              <!-- Stats Item 3 -->
+              <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fa-regular fa-face-smile-beam"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h4>
+                      <span class="purecounter" data-purecounter-start="0" data-purecounter-end="8000" data-purecounter-duration="4"></span>+ reviews
+                    </h4>
+                    <p class="mb-0">Satisfaction Rate</p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+        
+              <!-- Stats Item 4 -->
+              <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h4>
+                      <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1000000" data-purecounter-duration="4"></span>+ 
+                    </h4>
+                    <p class="mb-0">Classes Completed</p>
+                  </div>
+                </div>
+              </div><!-- End Stats Item -->
+            </div>
+          </div>
+        </section>
+        
+        
+    
+      </div>
+    </section>
+    <!-- /Hero Section -->
+    
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 align-items-center justify-content-between">
+
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">MORE ABOUT US</span>
+            <h2 class="about-title">Why Choose EDUVERSE for Your Growth?</h2>
+            <p class="about-description"><span>EDUVERSE</span> is dedicated to making world-class education accessible to learners everywhere. Our online courses, from secondary to PhD levels, are designed for working professionals, career changers, and students who seek flexible learning without compromising their job or lifestyle. Partnering with renowned universities globally, EDUVERSE offers a wide range of programs in business, management, arts, IT, and more, ensuring industry-relevant, job-ready skills.
+
+              With 24/7 support, affordable fees, and globally recognized credentials, we empower students to pursue higher education and career growth at their own pace, setting the stage for lifelong success.</p>
+
+            <div class="row feature-list-wrapper">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i># 1 In Affordability</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Carrier Oriented Programs</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Cost effective with affordable EMI</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i>Flexible joining dates multiple yearly intakes</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet.</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Lorem ipsum dolor sit amet.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-wrapper">
+              <div class="row gy-4">
+                <div class="col-lg-5 col-6">
+                  <div class="profile d-flex align-items-center gap-3">
+                    <img src="assets/img/bg-1.avif" alt="CEO Profile" class="profile-image">
+                    <div>
+                      <h4 class="profile-name">Hari</h4>
+                      <p class="profile-position">CEO &amp; Founder</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-6">
+                  <div class="contact-info d-flex align-items-center gap-2">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                      <p class="contact-label">Call us anytime</p>
+                      <p class="contact-number">+123 456-789</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+              </div>
+              <div class="experience-badge floating">
+                <h3>15+ <span>Years</span></h3>
+                <p>Of experience in business service</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why Choose EDUVERSE for Your Future?</h2>
+        <p>At EDUVERSE, we are committed to empowering individuals with knowledge, skills, and the mindset to thrive in an ever-evolving world. Choosing the right educational institution is a significant decision that shapes your academic, professional, and personal journey. Here’s why EDUVERSE stands out as the ideal choice for your future:</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+    
+        <div class="d-flex justify-content-center">
+    
+          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+    
+            <li class="nav-item">
+              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                <h4>World-Class Programs</h4>
+              </a>
+            </li><!-- End tab nav item -->
+    
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                <h4>Exceptional Faculty</h4>
+              </a>
+            </li><!-- End tab nav item -->
+    
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                <h4>Modern Facilities</h4>
+              </a>
+            </li><!-- End tab nav item -->
+    
+          </ul>
+    
+        </div>
+    
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+    
+          <!-- Tab 1: World-Class Programs -->
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Explore Diverse Programs Tailored for Every Aspiration</h3>
+                <p class="fst-italic">
+                  At EDUVERSE, we offer a wide range of undergraduate, postgraduate, and doctoral programs designed to shape future leaders. From business to technology, arts to sciences, our programs are tailored to meet the evolving demands of the modern world.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Accredited programs recognized globally.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Flexible learning options, including online and hybrid modes.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Interdisciplinary courses fostering innovation and creativity.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/learn1.webp" alt="World-Class Programs" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab 1 -->
+    
+          <!-- Tab 2: Exceptional Faculty -->
+          <div class="tab-pane fade" id="features-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>Learn from Leading Experts in Their Fields</h3>
+                <p class="fst-italic">
+                  Our faculty consists of renowned scholars, researchers, and industry professionals dedicated to mentoring and empowering students. They bring their real-world experience and innovative teaching methods to the classroom.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Faculty with extensive academic and professional expertise.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Personalized mentoring to help you achieve your goals.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Engaging lectures and hands-on learning experiences.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Opportunities to collaborate on groundbreaking research projects.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/learn1.webp" alt="Exceptional Faculty" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab 2 -->
+    
+          <!-- Tab 3: Modern Facilities -->
+          <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>State-of-the-Art Facilities for Holistic Growth</h3>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span>Smart classrooms equipped with the latest technology.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>World-class libraries with access to digital and print resources.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Research centers fostering innovation and discovery.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Modern sports complexes and wellness centers.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  Our infrastructure supports academic excellence and personal well-being, ensuring a comprehensive educational experience for all students.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/features-illustration-3.webp" alt="Modern Facilities" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab 3 -->
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Features Section -->
+
+
+
+        <!-- Courses Section -->
+  <section id="courses" class="pricing section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Our Courses</h2>
+      <p>Explore a wide range of programs designed to empower your academic and professional growth.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Swiper Container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Course Card 1 -->
+          <div class="swiper-slide">
+            <div class="pricing-card">
+              <h3>Bachelor of Computer Science</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">12,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Build a strong foundation in programming, data structures, and artificial intelligence to excel in the tech industry.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Advanced Programming</li>
+                <li><i class="bi bi-check-circle-fill"></i> Artificial Intelligence</li>
+                <li><i class="bi bi-check-circle-fill"></i> Data Structures</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-primary">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 1 -->
+
+          <!-- Course Card 2 (Most Popular) -->
+          <div class="swiper-slide">
+            <div class="pricing-card popular">
+              <div class="popular-badge">Most Popular</div>
+              <h3>MBA in Business Administration</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">15,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Enhance your leadership skills and business acumen with our globally recognized MBA program.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Strategic Management</li>
+                <li><i class="bi bi-check-circle-fill"></i> Marketing Strategies</li>
+                <li><i class="bi bi-check-circle-fill"></i> Financial Analysis</li>
+                <li><i class="bi bi-check-circle-fill"></i> International Business</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-light">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 2 -->
+
+          <!-- Course Card 3 -->
+          <div class="swiper-slide">
+            <div class="pricing-card">
+              <h3>Master of Data Science</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">18,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Acquire advanced skills in data analysis, machine learning, and big data technologies to thrive in a data-driven world.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Machine Learning</li>
+                <li><i class="bi bi-check-circle-fill"></i> Big Data Technologies</li>
+                <li><i class="bi bi-check-circle-fill"></i> Data Visualization</li>
+                <li><i class="bi bi-check-circle-fill"></i> Predictive Analytics</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-primary">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 3 -->
+
+          <!-- Course Card 4 -->
+          <div class="swiper-slide">
+            <div class="pricing-card">
+              <h3>Master of Public Health</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">16,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Focus on epidemiology, public health policy, and global health initiatives to make a meaningful impact.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Epidemiology</li>
+                <li><i class="bi bi-check-circle-fill"></i> Health Policy</li>
+                <li><i class="bi bi-check-circle-fill"></i> Biostatistics</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-primary">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 4 -->
+
+          <!-- Course Card 5 -->
+          <div class="swiper-slide">
+            <div class="pricing-card">
+              <h3>Master of Fine Arts</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">14,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Enhance your creative skills in visual arts, creative writing, and performing arts with our MFA program.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Creative Writing</li>
+                <li><i class="bi bi-check-circle-fill"></i> Visual Arts</li>
+                <li><i class="bi bi-check-circle-fill"></i> Performing Arts</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-primary">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 5 -->
+
+          <!-- Course Card 6 -->
+          <div class="swiper-slide">
+            <div class="pricing-card">
+              <h3>Bachelor of Psychology</h3>
+              <div class="price">
+                <span class="currency">$</span>
+                <span class="amount">11,000</span>
+                <span class="period">/ year</span>
+              </div>
+              <p class="description">Study human behavior, cognitive processes, and clinical techniques to pursue a career in psychology.</p>
+              <h4>Course Highlights:</h4>
+              <ul class="features-list">
+                <li><i class="bi bi-check-circle-fill"></i> Cognitive Psychology</li>
+                <li><i class="bi bi-check-circle-fill"></i> Research Methods</li>
+                <li><i class="bi bi-check-circle-fill"></i> Clinical Techniques</li>
+              </ul>
+              <a href="course-details.html" class="btn btn-primary">
+                Enroll Now
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Course Card 6 -->
+
+          <!-- Add more courses following the same structure -->
+
+        </div><!-- End Swiper Wrapper -->
+
+        <!-- Swiper Pagination (Optional) -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div><!-- End Swiper -->
+
+    </div><!-- End Container -->
+
+  </section>
+    
+    
+    
+    
+    
+    <!-- / Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+
+      <div class="container">
+    
+        <div class="row gy-4">
+    
+          <!-- Feature Box 1 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box orange">
+              <i class="fas fa-graduation-cap"></i>
+              <h4>Accredited Programs</h4>
+              <p>Globally recognized programs designed to help students achieve academic excellence and career goals.</p>
+            </div>
+          </div><!-- End Feature Box-->
+    
+          <!-- Feature Box 2 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box blue">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <h4>Expert Faculty</h4>
+              <p>Learn from industry-leading professors and mentors dedicated to student success and innovation.</p>
+            </div>
+          </div><!-- End Feature Box-->
+    
+          <!-- Feature Box 3 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box green">
+              <i class="fas fa-laptop-code"></i>
+              <h4>Modern Learning Tools</h4>
+              <p>State-of-the-art facilities and resources, including smart classrooms, labs, and online platforms.</p>
+            </div>
+          </div><!-- End Feature Box-->
+    
+          <!-- Feature Box 4 -->
+          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box red">
+              <i class="fas fa-globe"></i>
+              <h4>Global Partnerships</h4>
+              <p>Collaborations with top universities worldwide to offer diverse exchange and dual degree programs.</p>
+            </div>
+          </div><!-- End Feature Box-->
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Features Cards Section -->
+
+    <!-- Features 2 Section -->
+    <section id="features-2" class="features-2 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row align-items-center">
+    
+          <!-- Left Column Features -->
+          <div class="col-lg-4">
+    
+            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Learn Anywhere, Anytime</h3>
+                  <p>Our programs are designed to be accessible on any device, enabling flexible and seamless learning experiences.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+            <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>Interactive Learning</h3>
+                  <p>Engage with multimedia content, live lectures, and interactive activities designed to keep you motivated.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-chalkboard"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+            <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+              <div class="d-flex align-items-center justify-content-end gap-4">
+                <div class="feature-content">
+                  <h3>High-Resolution Content</h3>
+                  <p>Access visually stunning and retina-ready course materials, making every detail crystal clear.</p>
+                </div>
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-eye"></i>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+          </div><!-- End Left Column Features -->
+    
+          <!-- Center Image -->
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="phone-mockup text-center">
+              <img src="/assets/img/logo.svg" alt="Educational Platform Mockup" class="img-fluid ">
+            </div>
+          </div><!-- End Phone Mockup -->
+    
+          <!-- Right Column Features -->
+          <div class="col-lg-4">
+    
+            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-code"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Secure and Scalable</h3>
+                  <p>Our platform is built with secure, scalable, and industry-compliant code to support thousands of learners.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+            <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Collaborative Environment</h3>
+                  <p>Connect with peers and faculty through discussion forums, live sessions, and group projects.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+            <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+              <div class="d-flex align-items-center gap-4">
+                <div class="feature-icon flex-shrink-0">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Global Accessibility</h3>
+                  <p>Join a global community of learners with our platform that works seamlessly across borders and regions.</p>
+                </div>
+              </div>
+            </div><!-- End .feature-item -->
+    
+          </div><!-- End Right Column Features -->
+    
+        </div><!-- End Row -->
+    
+      </div><!-- End Container -->
+    
+    </section>
+    <!-- /Features 2 Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row content justify-content-center align-items-center position-relative">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-4 mb-4">Shape Your Future with EDUVERSE</h2>
+            <p class="mb-4">
+              Join a global community of learners. Discover programs designed to equip you with skills for a successful career. Take the first step today.
+            </p>
+            <div class="cta-buttons">
+              <a href="#apply" class="btn btn-cta-primary me-3">Apply Now</a>
+              <a href="#courses" class="btn btn-cta-secondary">Explore Courses</a>
+            </div>
+          </div>
+    
+          <!-- Abstract Background Elements -->
+          <div class="shape shape-1">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+    
+          <div class="shape shape-2">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+    
+          <!-- Dot Pattern Groups -->
+          <div class="dots dots-1">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern)"></rect>
+            </svg>
+          </div>
+    
+          <div class="dots dots-2">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="currentColor"></circle>
+              </pattern>
+              <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>
+            </svg>
+          </div>
+    
+          <div class="shape shape-3">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>
+            </svg>
+          </div>
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Call To Action Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Globally Accredited for Your <span style="color: #f20f10;">Success</span></h2>
+        </div>
+    
+        <!-- Swiper Container -->
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 2000,
+              "autoplay": {
+                "delay": 1000,
+                "disableOnInteraction": false,
+                "reverseDirection": false
+              },
+              "slidesPerView": "auto",
+              "spaceBetween": 30,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 40
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/aicte-150x136.png" class="img-fluid" alt="AICTE Accreditation">
+                <p class="logo-caption">AICTE Accredited</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/dayan-150x136.png" class="img-fluid" alt="Dayananda Sagar Accreditation">
+                <p class="logo-caption">Dayananda Sagar Approved</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/indi-150x136.png" class="img-fluid" alt="Indian Council Accreditation">
+                <p class="logo-caption">Indian Council Recognized</p>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+            <!-- Slide 9 -->
+            <div class="swiper-slide">
+              <div class="client-logo">
+                <img src="assets/img/nacc-150x136.png" class="img-fluid" alt="NACC Accreditation">
+                <p class="logo-caption">NACC Certified</p>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Clients Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What Our Students Say</h2>
+        <p>Hear from our students about their experiences and achievements at EDUVERSE.</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+    
+        <div class="row g-5">
+    
+          <!-- Testimonial 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item">
+              <i class="fas fa-user-graduate testimonial-img"></i>
+                            <h3>Student Name</h3>
+              <h4>Business Management Graduate</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Studying at EDUVERSE was life-changing. The faculty provided exceptional guidance, and the career services team helped me secure a fantastic internship that turned into a full-time role.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+    
+          <!-- Testimonial 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-item">
+              <i class="fas fa-user-graduate testimonial-img"></i>
+                            <h3>Student Name</h3>
+              <h4>Computer Science Student</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                The state-of-the-art labs and access to cutting-edge technology made learning so engaging. I’ve gained hands-on experience that prepared me for a competitive tech industry.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+    
+          <!-- Testimonial 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-item">
+              <i class="fas fa-user-graduate testimonial-img"></i>
+              <h3>Student Name</h3>
+              <h4>International Relations Graduate</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                EDUVERSE offered me the opportunity to study abroad and collaborate with peers from diverse cultures. It was an enriching experience that broadened my global perspective.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+    
+          <!-- Testimonial 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-item">
+             <i class="fas fa-user-graduate testimonial-img"></i>
+              <h3>Student Name</h3>
+              <h4>Engineering Student</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                The professors at EDUVERSE are incredibly supportive and knowledgeable. Their mentorship has been instrumental in my academic success and personal growth.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Testimonials Section -->
+
+    <!-- Stats Section -->
+    <!-- <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Latest News & Blogs</h2>
+        <p>Stay updated with the latest insights, events, and stories from our university.</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row g-4">
+    
+          <!-- News/Blog 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="assets/img/learn1.webp" alt="Blog 1" class="img-fluid rounded">
+              </div>
+              <div>
+                <h3>10 Tips for Academic Success</h3>
+                <p>Discover practical strategies to improve your academic journey and achieve outstanding results.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End News/Blog 1 -->
+    
+          <!-- News/Blog 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="assets/img/learn1.webp" alt="Blog 2" class="img-fluid rounded">
+              </div>
+              <div>
+                <h3>Exploring Campus Life</h3>
+                <p>Take a look at our vibrant campus, student-led activities, and learning opportunities.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End News/Blog 2 -->
+    
+          <!-- News/Blog 3 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="assets/img/learn1.webp" alt="Blog 3" class="img-fluid rounded">
+              </div>
+              <div>
+                <h3>Alumni Spotlight: John Doe</h3>
+                <p>Meet our successful alumni and discover their inspiring journey from our university to global leadership.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End News/Blog 3 -->
+    
+          <!-- News/Blog 4 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="assets/img/learn1.webp" alt="Blog 4" class="img-fluid rounded">
+              </div>
+              <div>
+                <h3>Research and Innovation at EDUVERSE</h3>
+                <p>Learn about groundbreaking research and innovation happening on our campus.</p>
+                <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End News/Blog 4 -->
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Services Section -->
+
+
+    <!-- Faq Section -->
+    <section class="faq-9 faq section light-background" id="faq">
+
+      <div class="container">
+        <div class="row">
+    
+          <div class="col-lg-5" data-aos="fade-up">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <p class="faq-description">Find answers to common questions about admissions, courses, campus facilities, and more.</p>
+            <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+              <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+    
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+            <div class="faq-container">
+    
+              <div class="faq-item faq-active">
+                <h3>How can I apply for admission?</h3>
+                <div class="faq-content">
+                  <p>Visit our Admissions page to find detailed information about the application process, including deadlines, required documents, and application fees.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+              <div class="faq-item">
+                <h3>What courses and programs are available?</h3>
+                <div class="faq-content">
+                  <p>We offer a variety of undergraduate, postgraduate, and professional courses across disciplines like Science, Arts, Business, and Technology. Explore our Programs page for more details.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+              <div class="faq-item">
+                <h3>What financial aid options are available?</h3>
+                <div class="faq-content">
+                  <p>We provide scholarships, grants, and student loan assistance to eligible students. Visit our Financial Aid page for eligibility criteria and application procedures.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+              <div class="faq-item">
+                <h3>Does the university offer on-campus housing?</h3>
+                <div class="faq-content">
+                  <p>Yes, we offer comfortable and affordable on-campus housing options. Check out the Campus Life page for accommodation details and virtual tours.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+              <div class="faq-item">
+                <h3>Are there any extracurricular activities available?</h3>
+                <div class="faq-content">
+                  <p>Our university encourages a vibrant campus life with clubs, societies, sports teams, and cultural events. Visit the Student Life page for more information.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+              <div class="faq-item">
+                <h3>What are the university's research facilities?</h3>
+                <div class="faq-content">
+                  <p>We have state-of-the-art research labs and collaborations with industry and academic institutions globally. Visit the Research section for detailed information.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+    
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <!-- /Faq Section -->
+
+    <!-- Call To Action 2 Section -->
+    <!-- <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+    <!-- /Call To Action 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for any inquiries, assistance, or information about our university programs and facilities.</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Information</h3>
+              <p>If you have questions about admissions, courses, or campus life, our team is here to help.</p>
+    
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Main Campus</h4>
+                  <p>University Address</p>
+                  <p>university ... Lorem ipsum dolor sit amet.</p>
+                </div>
+              </div>
+    
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Support</h4>
+                  <p>+90000 00000 00</p>
+                  <p>+9 000000 0000</p>
+                </div>
+              </div>
+    
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Support</h4>
+                  <p>admissions@university.com</p>
+                  <p>info@university.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get in Touch</h3>
+              <p>Fill out the form below to send us a message, and our team will get back to you as soon as possible.</p>
+    
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+    
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+    
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  </div>
+    
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                  </div>
+    
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  </div>
+    
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+    
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+    
+                </div>
+              </form>
+    
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    
+    </section>
+    <!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- About Section -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Eduverse Education</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>University Address</p>
+            <p>university ... Lorem ipsum dolor sit amet.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+90000 00000 00</span></p>
+            <p><strong>Email:</strong> <span>contact@university.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Campus Life</a></li>
+            <li><a href="#">Alumni</a></li>
+          </ul>
+        </div>
+  
+        <!-- Resources -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Faculty Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Career Services</a></li>
+          </ul>
+        </div>
+  
+        <!-- Programs -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#">Undergraduate</a></li>
+            <li><a href="#">Postgraduate</a></li>
+            <li><a href="#">Online Courses</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">International Students</a></li>
+          </ul>
+        </div>
+  
+        <!-- Legal -->
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Eduverse Education</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by Hari</a>
+      </div>
+    </div>
+  
+  </footer>
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <!-- AOS JS (If Used) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Initialize AOS (If Used) -->
+  <script>
+    AOS.init();
+  </script>
+
+  
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var accreditationsSwiper = new Swiper('.accreditations-slider', {
+        loop: true, // Enable infinite looping
+        centeredSlides: true, // Keeps the active slide in the center
+        slidesPerView: 'auto', // Allows responsive slides
+        autoplay: {
+          delay: 1000, // Time between transitions (3 seconds)
+          disableOnInteraction: false, // Continue autoplay after interactions
+        },
+        slidesPerView: 5, // Number of slides visible at once
+        spaceBetween: 30, // Space between slides in px
+        centeredSlides: true, // Center the active slide
+        grabCursor: true, // Show grab cursor
+        // Responsive breakpoints
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+          },
+          992: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+        },
+        // Pagination (Optional)
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      speed: 1000, // Transition speed in ms
+      effect: 'slide', // Transition effect
+      });
+
+      // Pause autoplay on mouse enter and resume on mouse leave
+      var swiperContainer = document.querySelector('.accreditations-slider');
+      swiperContainer.addEventListener('mouseenter', function () {
+        accreditationsSwiper.autoplay.stop();
+      });
+      swiperContainer.addEventListener('mouseleave', function () {
+        accreditationsSwiper.autoplay.start();
+      });
+    });
+  </script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  new Typed('#typed-hero-1', {
+    strings: ["Your Future Starts Here", "Learn and Grow", "Achieve Excellence"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true
+  });
+
+  new Typed('#typed-hero-2', {
+    strings: ["Excellence in Education", "Discover New Horizons", "Empower Your Skills"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true
+  });
+
+  new Typed('#typed-hero-3', {
+    strings: ["Innovation at Its Peak", "A World of Opportunities", "Be a Global Leader"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true
+  });
+});
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize hero swiper
+      var heroSwiper = new Swiper('.hero-swiper', {
+        loop:true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable:true,
+        },
+        autoplay: {
+          delay:4000,
+        }
+      });
+
+      // Typed.js for hero slides
+
+      // Typed.js for courses title
+      // new Typed('#typed-courses', {
+      //   strings: ["Our Featured Courses", "Discover Your Path"],
+      //   typeSpeed: 50,
+      //   backSpeed: 30,
+      //   backDelay: 2000,
+      //   loop: true
+      // });
+
+      // Typed.js for stats subtitle
+      // new Typed('#typed-stats-subtitle', {
+      //   strings: ["Our Achievements at a Glance", "Numbers That Speak For Us"],
+      //   typeSpeed: 50,
+      //   backSpeed: 30,
+      //   backDelay: 2000,
+      //   loop: true
+      // });
+
+      // Initialize courses swiper
+      var coursesSwiper = new Swiper('.swiper-courses', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay:4000,
+        },
+        slidesPerView:1,
+        spaceBetween:20,
+        breakpoints: {
+          640: {
+            slidesPerView:2,
+            spaceBetween:50
+          },
+          992: {
+            slidesPerView:3,
+            spaceBetween:40
+          }
+        }
+      });
+
+      AOS.init({
+        duration:500,
+        once:true,
+      });
+    });
+  </script>
+
+  
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.accreditations-track');
+    const items = document.querySelectorAll('.accreditation-item');
+
+    // Function to remove scaling from all items
+    const removeScaling = () => {
+      items.forEach(item => item.classList.remove('scale-up'));
+    };
+
+    // Function to add scaling to the central item
+    const scaleCentralItem = () => {
+      const trackRect = track.getBoundingClientRect();
+      const centerX = trackRect.left + trackRect.width / 2;
+
+      let closestItem = null;
+      let closestDistance = Infinity;
+
+      items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        const itemCenterX = itemRect.left + itemRect.width / 2;
+        const distance = Math.abs(centerX - itemCenterX);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestItem = item;
+        }
+      });
+
+      if (closestItem) {
+        closestItem.classList.add('scale-up');
+      }
+    };
+
+    // Initial scaling
+    scaleCentralItem();
+
+    // Scale on scroll
+    window.addEventListener('scroll', () => {
+      removeScaling();
+      scaleCentralItem();
+    });
+
+    // Scale on resize
+    window.addEventListener('resize', () => {
+      removeScaling();
+      scaleCentralItem();
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.mySwiper', {
+      loop: true, // Enables infinite looping
+      centeredSlides: true, // Centers the active slide
+      slidesPerView: 3, // Number of slides per view
+      spaceBetween: 30, // Space between slides in px
+      autoplay: {
+        delay: 4000, // Delay between transitions in ms
+        disableOnInteraction: false, // Continue autoplay after user interactions
+      },
+      navigation: {
+        nextEl: '.swiper-button-next', // Next button selector
+        prevEl: '.swiper-button-prev', // Previous button selector
+      },
+      pagination: {
+        el: '.swiper-pagination', // Pagination selector
+        clickable: true, // Allows clicking on pagination bullets
+      },
+      breakpoints: {
+        // Responsive breakpoints
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      speed: 1000, // Transition speed in ms
+      effect: 'slide', // Transition effect
+    });
+  });
+
+</script>
+
+
+
+
+</body>
+
+</html>
