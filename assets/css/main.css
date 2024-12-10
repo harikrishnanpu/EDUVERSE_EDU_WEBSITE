@@ -1,17 +1,17 @@
+
 /* Fonts */
 :root {
-  --default-font: "Noto Sans", sans-serif;
-  --default-font1: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Noto Sans", sans-serif;
-  --nav-font: "Noto Sans", sans-serif;
+  --default-font: 'Roboto', sans-serif;
+  --heading-font: 'Roboto', sans-serif;
+  --nav-font: 'Roboto', sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #312b7d; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #312b7d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #312b7d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --default-color: #000000bb; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #000000bb; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #000000bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -49,10 +49,15 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+*{
+ font-family:  'Roboto', sans-serif ;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--default-font) !important;
 }
 
 a {
@@ -730,7 +735,7 @@ section,
 }
 
 .hero .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 2.625rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -826,6 +831,7 @@ section,
 .hero .hero-image img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .hero .customers-badge {
@@ -2613,3 +2619,77 @@ section,
   padding-bottom: 10px !important;
   padding-top: 10px !important;
 }
+
+
+
+    /* Courses Section styles */
+    .courses-section {
+      padding: 60px 0;
+      background: #f7f7f7;
+    }
+    .courses-section .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .courses-section .swiper-slide {
+      text-align: center;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .courses-section .swiper-slide img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .courses-section .course-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .courses-section .course-desc {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .courses-section .view-more-btn {
+      background: #0077ff;
+      color:#fff;
+      padding:0.5rem 1rem;
+      border-radius:4px;
+      font-size:0.9rem;
+      text-decoration:none;
+    }
+    .courses-section .view-more-btn:hover {
+      background:#005bb5;
+    }
+
+    /* Typed text styling in hero and stats */
+    .typed-text {
+      color: #f20f0fc5;
+      font-weight: 600;
+    }
+    .stats-subtitle {
+      margin-bottom: 30px;
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight:600;
+      color: #333;
+    }
+
+    /* Parallax about section */
+    #about {
+      background: url('assets/img/about-5.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* Adjusted padding to ensure text readability in about section */
+    #about .container {
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      padding: 40px;
+    }
