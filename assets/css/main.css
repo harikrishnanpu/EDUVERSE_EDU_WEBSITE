@@ -896,7 +896,7 @@ section,
 
 .hero .customers-badge .avatar {
   width: 35px;
-  height: 35px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid var(--surface-color);
   margin-left: -8px;
