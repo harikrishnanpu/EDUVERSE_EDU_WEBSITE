@@ -1110,46 +1110,47 @@
   ];
 
 
-  coursesData.forEach((course, idx) => {
-    const option = document.createElement('option');
-    option.value = course.name;
-    option.textContent = course.name;
-    courseSelect.appendChild(option);
-  });
+  coursesData.forEach((course) => {
+  const option = document.createElement('option');
+  option.value = course.name; // Use course name as the value
+  option.textContent = course.name;
+  courseSelect.appendChild(option);
+});
 
-  const courseDetailsCard = document.getElementById('courseDetailsCard');
-  const courseNameEl = document.getElementById('courseName');
-  const courseDescriptionEl = document.getElementById('courseDescription');
-  const courseTimeEl = document.getElementById('courseTime');
-  const courseFeaturesList = document.getElementById('courseFeaturesList');
+const courseDetailsCard = document.getElementById('courseDetailsCard');
+const courseNameEl = document.getElementById('courseName');
+const courseDescriptionEl = document.getElementById('courseDescription');
+const courseTimeEl = document.getElementById('courseTime');
+const courseFeaturesList = document.getElementById('courseFeaturesList');
 
+if (selectedCourseName) {
+  // Find the course by its name
+  const selectedCourse = coursesData.find(
+    (course) => course.name.toLowerCase() === selectedCourseName.toLowerCase()
+  );
 
+  if (selectedCourse) {
+    // Set the courseSelect value to the course name
+    courseSelect.value = selectedCourse.name;
 
+    courseNameEl.textContent = selectedCourse.name;
+    courseDescriptionEl.textContent = selectedCourse.description;
+    courseTimeEl.textContent = selectedCourse.time;
 
-  if (selectedCourseName) {
-    const selectedCourseIndex = coursesData.findIndex(course => course.name.toLowerCase() === selectedCourseName.toLowerCase());
-    if (selectedCourseIndex > -1) {
-      courseSelect.value = selectedCourseIndex;
+    // Populate course features
+    courseFeaturesList.innerHTML = '';
+    selectedCourse.features.forEach((feature) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+      courseFeaturesList.appendChild(li);
+    });
 
-      const selectedCourse = coursesData[selectedCourseIndex];
-      courseNameEl.textContent = selectedCourse.name;
-      courseDescriptionEl.textContent = selectedCourse.description;
-      courseTimeEl.textContent = selectedCourse.time;
-
-      // Populate course features
-      courseFeaturesList.innerHTML = '';
-      selectedCourse.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
-        courseFeaturesList.appendChild(li);
-      });
-
-      courseDetailsCard.style.display = 'block';
-    }
-
-      // Trigger change event when course is auto-selected
-  courseSelect.dispatchEvent(new Event('change'));
+    courseDetailsCard.style.display = 'block';
   }
+
+  // Trigger change event when course is auto-selected
+  courseSelect.dispatchEvent(new Event('change'));
+}
 
 
   // Display selected course details
