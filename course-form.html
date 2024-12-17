@@ -20,6 +20,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -199,7 +201,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
 
-            <form id="enrollmentForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="submit-form"  action="" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-3">
                 <div class="col-md-6 col-6">
                   <label for="firstName" class="form-label">First Name <span style="color:red;">*</span></label>
@@ -703,10 +705,6 @@
     }
   });
 
-  // Form submission
-  const form = document.getElementById('enrollmentForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
 
     const formData = {
       firstName: form.firstName.value.trim(),
@@ -738,42 +736,30 @@
       alert("Please enter a valid 10-digit mobile number.");
       return;
     }
-
     // Replace 'YOUR_GOOGLE_SCRIPT_URL' with your actual Google Apps Script Web App URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx2NyODRef8V42-DLTaazxgWfNV16dt9hJb_hkTUHFeFFH1hT9gqF_Zo0X21y7r7QPc/exec';
-
-    fetch(scriptURL, {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.result === 'success') {
-          // Show success modal
-          const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-          successModal.show();
-
-          // Auto close modal after 3 seconds
-          setTimeout(() => {
-            successModal.hide();
-            form.reset();
-            courseDetailsCard.style.display = 'none';
-            courseSelect.selectedIndex = 0;
-          }, 3000);
-        } else {
-          throw new Error('Submission failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert("There was an error submitting your form. Please try again.");
-      });
-  });
+   
 });
+
+
+
+
+$("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxfgKLDUt65I0JUMIzJ-c1-Xz68nyU6hzt0keFR9DBwH8GA8EbZ-PFiDmKb8dRjjwau/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
 
 </script>
 
