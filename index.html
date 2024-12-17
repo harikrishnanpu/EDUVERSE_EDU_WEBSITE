@@ -1725,6 +1725,7 @@ function renderCourses() {
       .join('');
 
     const isPopular = index === 1 ? '<div class="popular-badge">Most Popular</div>' : '';
+    const courseNameParam = encodeURIComponent(course.name); // Ensures the course name is URL-safe
 
     const courseHTML = `
       <div class="swiper-slide">
@@ -1741,9 +1742,9 @@ function renderCourses() {
           <ul class="features-list">
             ${featuresList}
           </ul>
-          <a href="course-form.html" class="btn btn-primary mt-3">
+          <a href=${`course-form.html?course=${courseNameParam}`} class="btn btn-primary mt-3">
             Enroll Now <i class="bi bi-arrow-right"></i>
-          </a>
+          </a> 
         </div>
       </div>
     `;
