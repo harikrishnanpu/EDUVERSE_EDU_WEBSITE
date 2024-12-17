@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Courses - Eduverse Education</title>
+  <meta name="description" content="Explore a wide range of courses at Eduverse Education. Find the perfect program that suits your academic and career goals.">
+  <meta name="keywords" content="Courses, Education, Undergraduate, Bachelor's, Master's, Eduverse">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.svg" rel="icon">
+  <link href="assets/img/logo.svg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <!-- Example of font imports; integrate these as needed -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+CU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Additional Styling for the Courses Page */
+    body.courses-page {
+      font-family: 'Poppins', sans-serif !important;
+      --accent-color: #312b7d;
+      --default-color: #000000bb;
+      --heading-color: #000000bb;
+      --nav-color: #212529;
+      --nav-hover-color: #f20f10;
+      --nav-mobile-background-color: #ffffff;
+      --nav-dropdown-background-color: #ffffff;
+      --nav-dropdown-color: #212529;
+      --nav-dropdown-hover-color: #212529;
+      background-color: var(--background-color);
+      color: var(--default-color);
+    }
+
+    .header .btn-getstarted, .btn-primary, .btn, .form-control, .form-check-input, .form-select, .nav-tabs .nav-link.active, .scroll-top {
+      background-color: var(--accent-color) !important;
+
+      border-radius: 50px !important;
+      border: none;
+    }
+
+    .btn, .form-control, .form-check-input, .form-select {
+      font-weight: 500;
+    }
+
+    #search-input{
+      padding: 10px 20px;
+    }
+
+
+    section, .section{
+      margin-top: 50px !important;
+      padding-top: 50px !important;
+    }
+
+    .btn:hover, .btn-getstarted:hover {
+      background-color: #312b7dcc !important;
+    }
+
+    .section-title h2::after{
+      display: none !important;
+    }
+
+    input.form-control, .form-select{
+      background-color: #f3f9ff !important;
+      color: var(--nav-color);
+    }
+
+    .form-check-input {
+      background-color: #312b7dcc !important;
+    }
+
+    input.form-control:focus, .form-select:focus {
+      box-shadow: 0 0 0 0.2rem rgba(49, 43, 125, 0.25);
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .nav-tabs .nav-link {
+      margin-right: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      color: var(--nav-color);
+    }
+
+    .nav-tabs .nav-link:hover {
+      background-color: rgba(49, 43, 125, 0.1) !important;
+      color: black !important;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: var(--accent-color) !important;
+      color: var(--contrast-color) !important;
+    }
+
+    .page-title {
+      padding: 140px 0 50px 0 !important;
+      background-color: #f3f9ff;
+      text-align: center;
+    }
+
+    .page-title h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    @media (max-width: 565px){
+      .page-title h1{
+        font-size: 1.5rem;
+      }
+
+      .page-title p{
+        font-size: .9rem !important;
+      }
+    }
+  
+
+    .page-title p {
+      font-size: 1rem;
+      color: var(--default-color);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Courses Page Section Title */
+    .courses-page .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      position: relative;
+      font-weight: 700;
+    }
+
+    .courses-page .section-title h2::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-color);
+      left: 10%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
+
+    .courses-page .section-title p {
+      font-size: 1rem;
+      color: var(--default-color);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Pricing Card for Courses */
+    .pricing-card {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      background-color: var(--surface-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-card .popular-badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+    }
+
+    .pricing-card .price {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+    }
+
+    .pricing-card .currency {
+      font-size: 0.9rem;
+    }
+
+    .pricing-card .amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .pricing-card .period {
+      font-size: 0.9rem;
+      color: var(--default-color);
+    }
+
+    .pricing-card .description {
+      font-size: 0.9rem;
+      color: var(--default-color);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .pricing-card h4 {
+      font-size: 1rem;
+      color: var(--default-color);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .pricing-card .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .pricing-card .features-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: var(--default-color);
+    }
+
+    .pricing-card .features-list li i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+
+    .pricing-card .btn {
+      border-radius: 50px;
+      transition: background-color 0.3s, color 0.3s;
+      padding: 10px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    .pricing-card .btn-primary {
+      background-color: var(--accent-color);
+      border: none;
+      color: var(--contrast-color);
+    }
+
+    .pricing-card .btn-primary:hover {
+      background-color: rgba(49, 43, 125, 0.8);
+    }
+
+    .pricing-card .btn-light {
+      background-color: var(--contrast-color);
+      color: var(--accent-color);
+      border: none;
+    }
+
+    .pricing-card .btn-light:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #212529 !important;
+    }
+
+    .scroll-top {
+      background-color: var(--accent-color);
+      transition: background-color 0.3s, opacity 0.3s;
+    }
+
+    .scroll-top:hover {
+      background-color: rgba(49, 43, 125, 0.8);
+    }
+
+    .scroll-top i {
+      color: var(--contrast-color);
+      font-size: 1.5rem;
+    }
+
+    #search-btn {
+      margin-left: 10px !important;
+      }
+
+    @media (max-width: 992px) {
+      .courses-page .section-title h2 {
+        font-size: 1.75rem;
+      }
+
+      .courses-page .section-title p {
+        font-size: 0.95rem;
+      }
+
+      #course-tabs .nav-link {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+      }
+
+      #search-input {
+        padding: 10px 20px;
+      }
+
+      #search-btn {
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .courses-page .section-title h2 {
+        font-size: 1.5rem;
+      }
+
+      .courses-page .section-title p {
+        font-size: 0.9rem;
+      }
+
+      #course-tabs .nav-link {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+      }
+
+      #search-input {
+        padding: 10px 20px;
+      }
+
+      #search-btn {
+        padding: 6px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .courses-page .section-title h2 {
+        font-size: 1.25rem;
+      }
+
+      .courses-page .section-title p {
+        font-size: 0.85rem;
+      }
+
+      #course-tabs .nav-link {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+      }
+
+      #search-input {
+        padding: 10px 20px;
+      }
+
+      #search-btn {
+        padding: 2px 16px;
+      }
+    }
+
+    .nav{
+      justify-content: center !important;
+    }
+
+  </style>
+
+</head>
+
+<body class="courses-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.svg" alt="Eduverse Education">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Why Us?</a></li>
+          <li><a href="courses.html" class="active">Our Courses</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li class="dropdown"><a href="index.html#faq"><span>Faq's</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Help</a></li>
+        </ul>
+        <div class="small-screen-btn">
+          <a class="btn" href="course-form.html">Apply Now</a>
+        </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div>
+        <a class="btn-getstarted" href="tel:9400273143"><i class="fa fa-phone" style="margin-right: 4px;"></i>Contact Us</a>
+        <a class="btn-getstarted" href="course-form.html">Apply Now</a>
+      </div>
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <section class="page-title d-flex align-items-center justify-content-center">
+      <div class="container">
+        <h1 class="text-center">Our Courses</h1>
+        <p class="text-center">Explore a wide range of programs designed to empower your academic and professional growth.</p>
+      </div>
+    </section>
+    <!-- End Page Title -->
+
+    <!-- Filters and Search Section -->
+    <section class="section" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8 col-md-12">
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs" id="course-tabs">
+              <li class="nav-item">
+                <a class="nav-link active show" data-category="all" href="#">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-category="undergraduate" href="#">Undergraduate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-category="bachelors" href="#">Bachelor's Degree</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-category="masters" href="#">Master's Degree</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mt-3 mt-lg-0">
+            <!-- Search Bar -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for courses..." id="search-input">
+              <button class="btn btn-primary" id="search-btn"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Filters -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <h5 class="mb-3" style="font-weight:600;">Filters:</h5>
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <div class="form-check">
+                <input class="form-check-input filter-check" type="checkbox" value="featured" id="filter-featured">
+                <label class="form-check-label" for="filter-featured">
+                  Show Featured Only
+                </label>
+              </div>
+              <div style="display: none !important;" class="form-check">
+                <input class="form-check-input filter-check" type="checkbox" value="affordable" id="filter-affordable">
+                <label class="form-check-label" for="filter-affordable">
+                  Under 1 year
+                </label>
+              </div>
+              <div>
+                <select class="form-select" id="sort-select" style="min-width:200px;">
+                  <option value="">Sort By</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="alpha-asc">Name: A to Z</option>
+                  <option value="alpha-desc">Name: Z to A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="row g-4" id="all-courses-container">
+          <!-- Course Cards will be dynamically inserted here -->
+        </div>
+
+      </div>
+    </section>
+    <!-- End Filters and Search Section -->
+
+    <!-- Featured Courses Section -->
+    <section class="section light-background" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div style="padding-bottom: 0px !important;" class="section-title" data-aos="fade-up">
+          <h2><span style="color: #312b7d;font-size: 1.5rem;" >Our Most Featured<span style="color: #f20f10; margin-left: 10px;">Courses</span></span></h2>
+        </div>
+        <!-- Swiper Container -->
+        <div class="swiper featured-swiper">
+          <div class="swiper-wrapper" id="featured-courses-container">
+            <!-- Dynamic Slides will be inserted here -->
+          </div>
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Featured Courses Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- About Section -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Eduverse Education</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Eduverse Education</p>
+            <p>Flat no. 50<br>
+              WMWF+HP9, V-Step Rd, Kempapura, Bellandur, Bengaluru, Karnataka 560037</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+90000 00000 00</span></p>
+            <p><strong>Email:</strong> <span>contact@university.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Campus Life</a></li>
+            <li><a href="#">Alumni</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Faculty Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Career Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#">Undergraduate</a></li>
+            <li><a href="#">Postgraduate</a></li>
+            <li><a href="#">Online Courses</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">International Students</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Eduverse Education</strong><br /> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by Hari Krishnan
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Initialize Featured Courses Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const featuredContainer = document.getElementById('featured-courses-container');
+  
+      const coursesData = [
+  {
+    "name": "B.E. Civil Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Planning, designing, and overseeing construction projects.",
+    "features": [
+      "Structural engineering design",
+      "Surveying with advanced tools",
+      "Hands-on projects for sustainable infrastructure"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on programming, cybersecurity, and data systems.",
+    "features": [
+      "Specialized AI and ML modules",
+      "Training in cybersecurity techniques",
+      "Capstone project in emerging technologies"
+    ]
+  },
+  {
+    "name": "M.B.A. Business Analytics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Data-driven decision-making and business intelligence.",
+    "features": [
+      "Hands-on data analysis projects",
+      "Training in data visualization tools",
+      "Real-world case studies for business insights"
+    ]
+  },
+  {
+    "name": "B.B.A. Shipping & Logistics Management",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Operations and logistics management for shipping industries.",
+    "features": [
+      "Global logistics simulations",
+      "Field training at shipping hubs",
+      "Industry partnerships with logistics leaders"
+    ]
+  },
+  {
+    "name": "M.B.A. Logistics and Supply Chain Management",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Strategic planning and operations in supply chains.",
+    "features": [
+      "Practical supply chain simulations",
+      "Advanced tools for logistics optimization",
+      "Collaboration with global supply chain experts"
+    ]
+  },
+  {
+    "name": "B.Sc. Game Design & Development",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Design and develop engaging and interactive games.",
+    "features": [
+      "Training in leading game engines",
+      "Interactive storytelling workshops",
+      "Exposure to VR and AR technologies"
+    ]
+  },
+  {
+    "name": "M.Sc. Data Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Learn big data analytics and machine learning.",
+    "features": [
+      "Real-world data science projects",
+      "Master Python and R programming",
+      "Training in advanced statistical modeling"
+    ]
+  }
+];
+  
+function renderFeaturedCourses() {
+  featuredContainer.innerHTML = '';
+  const featuredCourses = coursesData.filter(course => course.featured);
+
+  if (featuredCourses.length === 0) {
+    featuredContainer.innerHTML = `
+      <div class="swiper-slide">
+        <p class="text-center">No featured courses available.</p>
+      </div>
+    `;
+    return;
+  }
+
+  featuredCourses.forEach(course => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+
+    // Generate the features list dynamically
+    const featuresList = course.features
+      .map(feature => `<li><i class="bi bi-check-circle-fill"></i> ${feature}</li>`)
+      .join('');
+
+    // Construct the slide HTML
+    slide.innerHTML = `
+      <div class="pricing-card">
+        <h3>${course.name}</h3>
+        <div class="price">
+          <span class="currency"></span>
+          <span class="amount">${course.time}</span>
+          <span class="period">/ duration</span>
+        </div>
+        <p class="description">${course.description}</p>
+        <h4>Course Highlights:</h4>
+        <ul class="features-list">
+          ${featuresList}
+        </ul>
+        <a href="course-form.html" class="btn btn-primary mt-3">
+          Enroll Now <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    `;
+
+    featuredContainer.appendChild(slide);
+  });
+
+  initializeFeaturedSwiper();
+}
+
+  
+      function initializeFeaturedSwiper() {
+        new Swiper('.featured-swiper', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          },
+          speed: 3000,
+          effect: 'slide',
+        });
+      }
+  
+      renderFeaturedCourses();
+    });
+  </script>
+
+  <!-- Courses Data and Rendering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const featuredContainer = document.getElementById('featured-courses-container');
+      const allContainer = document.getElementById('all-courses-container');
+      const tabs = document.getElementById('course-tabs');
+      const searchInput = document.getElementById('search-input');
+      const searchBtn = document.getElementById('search-btn');
+      const filterFeatured = document.getElementById('filter-featured');
+      const filterAffordable = document.getElementById('filter-affordable');
+      const sortSelect = document.getElementById('sort-select');
+
+      let currentCategory = 'all';
+      let currentSearch = '';
+      let showOnlyFeatured = false;
+      let showAffordable = false;
+      let sortOption = '';
+
+     const coursesData = [
+  {
+    "name": "B.E. Automobile Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": false,
+    "description": "Fundamentals of automobile design and maintenance.",
+    "features": [
+      "Automobile design workshops",
+      "Practical vehicle diagnostics",
+      "Internships with top manufacturers"
+    ]
+  },
+  {
+    "name": "B.E. Civil Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Planning, designing, and overseeing construction projects.",
+    "features": [
+      "Structural engineering training",
+      "Surveying with modern tools",
+      "Hands-on infrastructure projects"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on programming, cybersecurity, and data systems.",
+    "features": [
+      "Programming hackathons",
+      "Cybersecurity specialization",
+      "AI and machine learning exposure"
+    ]
+  },
+  {
+    "name": "B.Sc. Nautical Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Navigation and maritime operations training.",
+    "features": [
+      "Navigation simulation labs",
+      "Maritime safety training",
+      "Onboard ship internships"
+    ]
+  },
+  {
+    "name": "SSLC (Secondary School Leaving Certificate)",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Foundational certification for 10th-grade education.",
+    "features": [
+      "Focus on basic sciences and mathematics",
+      "Preparation for higher education",
+      "Core subject assessments"
+    ]
+  },
+  {
+    "name": "12th Board Examination",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Preparatory education for undergraduate studies.",
+    "features": [
+      "Specializations in science, commerce, and arts",
+      "Advanced subject concepts",
+      "Higher education career guidance"
+    ]
+  },
+  {
+    "name": "M.B.A. Business Analytics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Data-driven decision-making and business intelligence.",
+    "features": [
+      "Hands-on analytics projects",
+      "Training in business tools like Power BI",
+      "Real-world case studies"
+    ]
+  },
+  {
+    "name": "M.Tech Artificial Intelligence",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized training in AI, ML, and neural networks.",
+    "features": [
+      "Deep learning applications",
+      "AI-driven project labs",
+      "Exposure to real-world AI systems"
+    ]
+  },
+  {
+    "name": "Diploma in Animation",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Learn 2D and 3D animation techniques.",
+    "features": [
+      "3D modeling software training",
+      "Animation storytelling workshops",
+      "Portfolio development"
+    ]
+  },
+  {
+    "name": "Certificate in Travel & Tourism",
+    "category": "certificate",
+    "time": "6 months",
+    "featured": false,
+    "description": "Basics of travel planning and tourism management.",
+    "features": [
+      "Destination management training",
+      "Customer service skills",
+      "Exposure to travel agency tools"
+    ]
+  },
+  {
+    "name": "B.Sc. Game Design & Development",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Design and develop engaging games.",
+    "features": [
+      "Game engine programming",
+      "3D game design tools",
+      "Team-based game projects"
+    ]
+  },
+  {
+    "name": "B.Sc. Fashion and Apparel Merchandising",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of fashion industry trends and apparel production.",
+    "features": [
+      "Fashion design software training",
+      "Industry-based internships",
+      "Trend forecasting workshops"
+    ]
+  },
+  {
+    "name": "B.B.A. Logistics and Supply Chain Management",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Operations and logistics management for shipping industries.",
+    "features": [
+      "Global supply chain simulations",
+      "Field training at logistics hubs",
+      "Exposure to ERP software"
+    ]
+  },
+  {
+    "name": "M.Sc. Data Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Learn big data analytics and machine learning.",
+    "features": [
+      "Python and R programming",
+      "Data visualization tools",
+      "Projects on real-world data sets"
+    ]
+  },
+  {
+    "name": "Diploma in Fire and Industrial Safety",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Focus on fire safety and risk management in industries.",
+    "features": [
+      "Practical safety drills",
+      "Fire hazard simulation training",
+      "Industry certifications"
+    ]
+  }
+]
+
+
+
+function renderCourses(container, courses) {
+  container.innerHTML = '';
+  if (courses.length === 0) {
+    container.innerHTML = '<div class="col-12"><p class="text-center">No courses found matching your criteria.</p></div>';
+    return;
+  }
+
+  courses.forEach(course => {
+    const col = document.createElement('div');
+    col.className = 'col-lg-4 col-md-6';
+
+    const card = document.createElement('div');
+    card.className = 'pricing-card';
+    card.setAttribute('data-aos', 'fade-up');
+
+    // Course Title
+    const title = document.createElement('h3');
+    title.textContent = course.name;
+    card.appendChild(title);
+
+    // Course Price or Time
+    const priceDiv = document.createElement('div');
+    priceDiv.className = 'price';
+    priceDiv.innerHTML = `
+      <span class="currency"></span>
+      <span class="amount">${course.time}</span>
+      <span class="period">/ duration</span>
+    `;
+    card.appendChild(priceDiv);
+
+    // Course Description
+    const description = document.createElement('p');
+    description.className = 'description';
+    description.textContent = course.description;
+    card.appendChild(description);
+
+    // Category
+    const category = document.createElement('h4');
+    category.textContent = `Category: ${course.category.charAt(0).toUpperCase() + course.category.slice(1)}`;
+    card.appendChild(category);
+
+    // Course Highlights
+    if (course.features && course.features.length > 0) {
+      const highlightsTitle = document.createElement('h4');
+      highlightsTitle.textContent = 'Course Highlights:';
+      card.appendChild(highlightsTitle);
+
+      const featuresList = document.createElement('ul');
+      featuresList.className = 'features-list';
+
+      course.features.forEach(feature => {
+        const featureItem = document.createElement('li');
+        featureItem.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+        featuresList.appendChild(featureItem);
+      });
+
+      card.appendChild(featuresList);
+    }
+
+    // Enroll Button
+    const enrollBtn = document.createElement('a');
+    enrollBtn.href = 'course-details.html';
+    enrollBtn.className = 'btn btn-primary mt-3';
+    enrollBtn.innerHTML = `Enroll Now <i class="bi bi-arrow-right"></i>`;
+    card.appendChild(enrollBtn);
+
+    // Append card to column
+    col.appendChild(card);
+    container.appendChild(col);
+  });
+}
+
+
+      function renderAllCourses() {
+        let filteredCourses = coursesData;
+
+        if (currentCategory !== 'all') {
+          filteredCourses = filteredCourses.filter(course => course.category === currentCategory);
+        }
+
+        if (currentSearch.trim() !== '') {
+          const searchTerm = currentSearch.toLowerCase();
+          filteredCourses = filteredCourses.filter(course => course.name.toLowerCase().includes(searchTerm));
+        }
+
+        if (showOnlyFeatured) {
+          filteredCourses = filteredCourses.filter(course => course.featured);
+        }
+
+        if (showAffordable) {
+          filteredCourses = filteredCourses.filter(course => course.price <= 10000);
+        }
+
+        if (sortOption === 'price-asc') {
+          filteredCourses.sort((a, b) => a.price - b.price);
+        } else if (sortOption === 'price-desc') {
+          filteredCourses.sort((a, b) => b.price - a.price);
+        } else if (sortOption === 'alpha-asc') {
+          filteredCourses.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (sortOption === 'alpha-desc') {
+          filteredCourses.sort((a, b) => b.name.localeCompare(a.name));
+        }
+
+        renderCourses(allContainer, filteredCourses);
+      }
+
+      tabs.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          tabs.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active', 'show'));
+          link.classList.add('active', 'show');
+          currentCategory = link.getAttribute('data-category');
+          renderAllCourses();
+        });
+      });
+
+      searchBtn.addEventListener('click', () => {
+        currentSearch = searchInput.value;
+        renderAllCourses();
+      });
+
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          currentSearch = searchInput.value;
+          renderAllCourses();
+        }
+      });
+
+      filterFeatured.addEventListener('change', () => {
+        showOnlyFeatured = filterFeatured.checked;
+        renderAllCourses();
+      });
+
+      filterAffordable.addEventListener('change', () => {
+        showAffordable = filterAffordable.checked;
+        renderAllCourses();
+      });
+
+      sortSelect.addEventListener('change', () => {
+        sortOption = sortSelect.value;
+        renderAllCourses();
+      });
+
+      renderAllCourses();
+    });
+  </script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

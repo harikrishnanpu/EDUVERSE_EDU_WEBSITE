@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Course Enrollment - Eduverse Education</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.svg" rel="icon">
+  <link href="assets/img/logo.svg" rel="apple-touch-icon">
+
+  <!-- Fonts & Vendor CSS -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+
+    .enroll-header {
+      background-color: #312b7d;
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .enroll-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .enroll-header p {
+      font-size: 1.1rem;
+    }
+
+    .form-section {
+      padding: 60px 0;
+    }
+
+    .course-details-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .course-details-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #312b7d;
+    }
+
+    .course-details-card .features-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .course-details-card .features-list li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .course-details-card .features-list li i {
+      color: #312b7d;
+      margin-right: 5px;
+    }
+
+    .btn-primary {
+      background-color: #312b7d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #4b449c;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+    .success-checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 4px solid #4caf50;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .success-checkmark:after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 10px;
+      width: 22px;
+      height: 45px;
+      border-right: 4px solid #4caf50;
+      border-bottom: 4px solid #4caf50;
+      transform: rotate(45deg);
+      box-sizing: border-box;
+    }
+
+    .success-message {
+      font-size: 1.1rem;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    @media (max-width: 767px) {
+      .enroll-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .enroll-header p {
+        font-size: 1rem;
+      }
+    }
+
+    .section-title{
+        padding-top: 130px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.svg" alt="Eduverse Education">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#features">Why Us?</a></li>
+          <li><a href="courses.html">Our Courses</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li class="dropdown"><a href="index.html#faq"><span>Faq's</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Help</a></li>
+        </ul>
+        <div class="small-screen-btn">
+          <a class="btn" href="course-form.html">Apply Now</a>
+        </div>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div>
+        <a class="btn-getstarted" href="tel:9400273143"><i class="fa fa-phone" style="margin-right: 4px;"></i>Contact Us</a>
+        <a class="btn-getstarted" href="#">Apply Now</a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="container section-title" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+      <h1>Enroll in Your Desired Course</h1>
+      <p>Take the first step toward a brighter future. Fill out the form below to get started.</p>
+    </div>
+</div>
+
+  <main>
+    <section class="form-section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <form id="enrollmentForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-3">
+                <div class="col-md-6 col-6">
+                  <label for="firstName" class="form-label">First Name <span style="color:red;">*</span></label>
+                  <input type="text" name="firstName" id="firstName" class="form-control" required>
+                </div>
+                <div class="col-md-6 col-6">
+                  <label for="lastName" class="form-label">Last Name <span style="color:red;">*</span></label>
+                  <input type="text" name="lastName" id="lastName" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="mobile" class="form-label">Mobile Number <span style="color:red;">*</span></label>
+                  <input type="tel" name="mobile" id="mobile" class="form-control" required pattern="[0-9]{10}"
+                    title="Enter a valid 10-digit phone number">
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email <span style="color:red;">*</span></label>
+                  <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="col-md-6 col-6">
+                  <label for="state" class="form-label">State <span style="color:red;">*</span></label>
+                  <input type="text" name="state" id="state" class="form-control" required>
+                </div>
+                <div class="col-md-6 col-6">
+                  <label for="courseSelect" class="form-label">Select Course <span style="color:red;">*</span></label>
+                  <select name="courseSelect" id="courseSelect" class="form-select" required>
+                    <option value="">-- Choose a Course --</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <label for="address" class="form-label">Address <span style="color:red;">*</span></label>
+                  <input type="text" name="address" id="address" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message (Optional)</label>
+                  <textarea name="message" id="message" class="form-control" rows="4"></textarea>
+                </div>
+              </div>
+
+              <div class="course-details-card" id="courseDetailsCard" data-aos="fade-up" data-aos-delay="300">
+                <h3 id="courseName"></h3>
+                <p id="courseDescription"></p>
+                <p><strong>Duration: </strong><span id="courseTime"></span></p>
+                <h5>Highlights:</h5>
+                <ul class="features-list" id="courseFeaturesList"></ul>
+              </div>
+
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center" style="border:none;">
+        <div class="modal-body">
+          <div class="success-checkmark"></div>
+          <div class="success-message">Your application has been submitted successfully!</div>
+          <p>We will get back to you shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <!-- About Section -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Eduverse Education</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Eduverse Education</p>
+            <p>Flat no. 50
+              WMWF+HP9, V-Step Rd, Kempapura, Bellandur, Bengaluru, Karnataka 560037</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+90000 00000 00</span></p>
+            <p><strong>Email:</strong> <span>contact@university.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Campus Life</a></li>
+            <li><a href="#">Alumni</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Faculty Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Career Services</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#">Undergraduate</a></li>
+            <li><a href="#">Postgraduate</a></li>
+            <li><a href="#">Online Courses</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">International Students</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="col-lg-2 col-md-3 col-6 footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Eduverse Education</strong><br /> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        Designed by Hari Krishnan
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+    // Course data (can be fetched from the server if needed)
+    const coursesData = [
+      {
+        "name": "B.E. Automobile Engineering",
+        "category": "bachelors",
+        "time": "4 years",
+        "featured": false,
+        "description": "Fundamentals of automobile design and maintenance.",
+        "features": [
+          "Automobile design workshops",
+          "Practical vehicle diagnostics",
+          "Internships with top manufacturers"
+        ]
+      },
+      {
+        "name": "B.E. Civil Engineering",
+        "category": "bachelors",
+        "time": "4 years",
+        "featured": true,
+        "description": "Planning, designing, and overseeing construction projects.",
+        "features": [
+          "Structural engineering training",
+          "Surveying with modern tools",
+          "Hands-on infrastructure projects"
+        ]
+      },
+      {
+        "name": "B.Tech Information Technology",
+        "category": "bachelors",
+        "time": "4 years",
+        "featured": true,
+        "description": "Focus on programming, cybersecurity, and data systems.",
+        "features": [
+          "Programming hackathons",
+          "Cybersecurity specialization",
+          "AI and machine learning exposure"
+        ]
+      },
+      {
+        "name": "M.B.A. Business Analytics",
+        "category": "masters",
+        "time": "2 years",
+        "featured": true,
+        "description": "Data-driven decision-making and business intelligence.",
+        "features": [
+          "Hands-on analytics projects",
+          "Training in business tools like Power BI",
+          "Real-world case studies"
+        ]
+      },
+      {
+        "name": "M.Tech Artificial Intelligence",
+        "category": "masters",
+        "time": "2 years",
+        "featured": true,
+        "description": "Specialized training in AI, ML, and neural networks.",
+        "features": [
+          "Deep learning applications",
+          "AI-driven project labs",
+          "Exposure to real-world AI systems"
+        ]
+      },
+      {
+        "name": "B.Sc. Game Design & Development",
+        "category": "bachelors",
+        "time": "3 years",
+        "featured": true,
+        "description": "Design and develop engaging games.",
+        "features": [
+          "Game engine programming",
+          "3D game design tools",
+          "Team-based game projects"
+        ]
+      },
+      {
+        "name": "B.B.A. Logistics and Supply Chain Management",
+        "category": "bachelors",
+        "time": "3 years",
+        "featured": true,
+        "description": "Operations and logistics management for industries.",
+        "features": [
+          "Global supply chain simulations",
+          "Field training at logistics hubs",
+          "Exposure to ERP software"
+        ]
+      },
+      {
+        "name": "Diploma in Animation",
+        "category": "diploma",
+        "time": "1 year",
+        "featured": false,
+        "description": "Learn 2D and 3D animation techniques.",
+        "features": [
+          "3D modeling software training",
+          "Animation storytelling workshops",
+          "Portfolio development"
+        ]
+      },
+      {
+        "name": "Certificate in Travel & Tourism",
+        "category": "certificate",
+        "time": "6 months",
+        "featured": false,
+        "description": "Basics of travel planning and tourism management.",
+        "features": [
+          "Destination management training",
+          "Customer service skills",
+          "Exposure to travel agency tools"
+        ]
+      }
+    ];
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Populate course dropdown
+  const courseSelect = document.getElementById('courseSelect');
+  const coursesData = [
+  {
+    "name": "B.E. Automobile Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": false,
+    "description": "Fundamentals of automobile design and maintenance.",
+    "features": [
+      "Automobile design workshops",
+      "Practical vehicle diagnostics",
+      "Internships with top manufacturers"
+    ]
+  },
+  {
+    "name": "B.E. Civil Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Planning, designing, and overseeing construction projects.",
+    "features": [
+      "Structural engineering training",
+      "Surveying with modern tools",
+      "Hands-on infrastructure projects"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on programming, cybersecurity, and data systems.",
+    "features": [
+      "Programming hackathons",
+      "Cybersecurity specialization",
+      "AI and machine learning exposure"
+    ]
+  },
+  {
+    "name": "B.Sc. Nautical Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Navigation and maritime operations training.",
+    "features": [
+      "Navigation simulation labs",
+      "Maritime safety training",
+      "Onboard ship internships"
+    ]
+  },
+  {
+    "name": "SSLC (Secondary School Leaving Certificate)",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Foundational certification for 10th-grade education.",
+    "features": [
+      "Focus on basic sciences and mathematics",
+      "Preparation for higher education",
+      "Core subject assessments"
+    ]
+  },
+  {
+    "name": "12th Board Examination",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Preparatory education for undergraduate studies.",
+    "features": [
+      "Specializations in science, commerce, and arts",
+      "Advanced subject concepts",
+      "Higher education career guidance"
+    ]
+  },
+  {
+    "name": "M.B.A. Business Analytics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Data-driven decision-making and business intelligence.",
+    "features": [
+      "Hands-on analytics projects",
+      "Training in business tools like Power BI",
+      "Real-world case studies"
+    ]
+  },
+  {
+    "name": "M.Tech Artificial Intelligence",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized training in AI, ML, and neural networks.",
+    "features": [
+      "Deep learning applications",
+      "AI-driven project labs",
+      "Exposure to real-world AI systems"
+    ]
+  },
+  {
+    "name": "Diploma in Animation",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Learn 2D and 3D animation techniques.",
+    "features": [
+      "3D modeling software training",
+      "Animation storytelling workshops",
+      "Portfolio development"
+    ]
+  },
+  {
+    "name": "Certificate in Travel & Tourism",
+    "category": "certificate",
+    "time": "6 months",
+    "featured": false,
+    "description": "Basics of travel planning and tourism management.",
+    "features": [
+      "Destination management training",
+      "Customer service skills",
+      "Exposure to travel agency tools"
+    ]
+  },
+  {
+    "name": "B.Sc. Game Design & Development",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Design and develop engaging games.",
+    "features": [
+      "Game engine programming",
+      "3D game design tools",
+      "Team-based game projects"
+    ]
+  },
+  {
+    "name": "B.Sc. Fashion and Apparel Merchandising",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of fashion industry trends and apparel production.",
+    "features": [
+      "Fashion design software training",
+      "Industry-based internships",
+      "Trend forecasting workshops"
+    ]
+  },
+  {
+    "name": "B.B.A. Logistics and Supply Chain Management",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Operations and logistics management for shipping industries.",
+    "features": [
+      "Global supply chain simulations",
+      "Field training at logistics hubs",
+      "Exposure to ERP software"
+    ]
+  },
+  {
+    "name": "M.Sc. Data Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Learn big data analytics and machine learning.",
+    "features": [
+      "Python and R programming",
+      "Data visualization tools",
+      "Projects on real-world data sets"
+    ]
+  },
+  {
+    "name": "Diploma in Fire and Industrial Safety",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Focus on fire safety and risk management in industries.",
+    "features": [
+      "Practical safety drills",
+      "Fire hazard simulation training",
+      "Industry certifications"
+    ]
+  }
+  ];
+
+  coursesData.forEach((course, idx) => {
+    const option = document.createElement('option');
+    option.value = idx;
+    option.textContent = course.name;
+    courseSelect.appendChild(option);
+  });
+
+  const courseDetailsCard = document.getElementById('courseDetailsCard');
+  const courseNameEl = document.getElementById('courseName');
+  const courseDescriptionEl = document.getElementById('courseDescription');
+  const courseTimeEl = document.getElementById('courseTime');
+  const courseFeaturesList = document.getElementById('courseFeaturesList');
+
+  // Display selected course details
+  courseSelect.addEventListener('change', () => {
+    const idx = courseSelect.value;
+    if (idx !== "") {
+      const selectedCourse = coursesData[idx];
+      courseNameEl.textContent = selectedCourse.name;
+      courseDescriptionEl.textContent = selectedCourse.description;
+      courseTimeEl.textContent = selectedCourse.time;
+      courseFeaturesList.innerHTML = '';
+      selectedCourse.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+        courseFeaturesList.appendChild(li);
+      });
+      courseDetailsCard.style.display = 'block';
+    } else {
+      courseDetailsCard.style.display = 'none';
+    }
+  });
+
+  // Form submission
+  const form = document.getElementById('enrollmentForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = {
+      firstName: form.firstName.value.trim(),
+      lastName: form.lastName.value.trim(),
+      mobile: form.mobile.value.trim(),
+      email: form.email.value.trim(),
+      state: form.state.value.trim(),
+      address: form.address.value.trim(),
+      courseSelected: coursesData[form.courseSelect.value] ? coursesData[form.courseSelect.value].name : '',
+      message: form.message.value.trim()
+    };
+
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.mobile || !formData.email || !formData.state || !formData.address || !formData.courseSelected) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Mobile number validation (assuming 10 digits)
+    const mobileRegex = /^[0-9]{10}$/;
+    if (!mobileRegex.test(formData.mobile)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    // Replace 'YOUR_GOOGLE_SCRIPT_URL' with your actual Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxa07WxLJN7ndkyu_w7w_r2GkyTLW_6NlKiVr5y3B9lTrw4_wy95R3-OpnNcinZXmF4/exec';
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.result === 'success') {
+          // Show success modal
+          const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+          successModal.show();
+
+          // Auto close modal after 3 seconds
+          setTimeout(() => {
+            successModal.hide();
+            form.reset();
+            courseDetailsCard.style.display = 'none';
+            courseSelect.selectedIndex = 0;
+          }, 3000);
+        } else {
+          throw new Error('Submission failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("There was an error submitting your form. Please try again.");
+      });
+  });
+});
+
+</script>
+
+</body>
+
+</html>

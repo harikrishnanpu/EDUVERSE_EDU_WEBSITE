@@ -2877,3 +2877,76 @@ section,  #about{
       border-radius: 8px;
       padding: 40px;
     }
+
+
+
+    /* --------------------------------------------------------------
+# Courses Page Styling
+-------------------------------------------------------------- */
+
+/* Section Titles */
+.courses-page .section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.courses-page .section-title h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+
+.courses-page .section-title p {
+  font-size: 1rem;
+  color: var(--default-color);
+}
+
+/* Tabs Navigation */
+#course-tabs .nav-link {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: var(--nav-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#course-tabs .nav-link.active {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+#course-tabs .nav-link:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--contrast-color);
+}
+
+/* Search Bar */
+#search-input {
+  border-radius: 50px 0 0 50px;
+  padding-left: 20px;
+}
+
+#search-btn {
+  border-radius: 0 50px 50px 0;
+}
+
+/* Additional Filters */
+#sort-select {
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+    

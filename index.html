@@ -40,6 +40,48 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+        .pricing-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+    }
+
+    .pricing-card .price {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+    }
+
+    .pricing-card .currency {
+      font-size: 0.9rem;
+    }
+
+    .pricing-card .amount {
+      font-size: 1.5rem !important;
+      font-weight: bold;
+    }
+
+    .pricing-card .period {
+      font-size: 0.9rem;
+      color: var(--default-color);
+    }
+
+    #courses .btn-cta-primary {
+      background-color: #312b7d;
+      color: #ffffff;
+      margin-top: 15px;
+    }
+
+
+    @media (max-width: 565px) {
+      .pricing .pricing-card .features-list li{
+        font-size: .8rem;
+      }
+    }
+
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -57,10 +99,10 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#features">Our Courses</a></li>
-          <li><a href="#services">Why Us?</a></li>
-          <li><a href="#pricing">Testimonials</a></li>
-          <li class="dropdown"><a href="#"><span>Faq's</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#features">Why Us?</a></li>
+          <li><a href="#courses">Our Courses</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li class="dropdown"><a href="#faq"><span>Faq's</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -80,14 +122,14 @@
           <li><a href="#contact">Help</a></li>
         </ul>
         <div class="small-screen-btn">
-          <a class="btn" href="#">Apply Now</a>
+          <a class="btn" href="course-form.html">Apply Now</a>
         </div>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div>
-        <a class="btn-getstarted" href="#"> <i style="margin-right: 4px;" class="fa fa-phone"></i>Contact Us</a>
-        <a class="btn-getstarted" href="#">Apply Now</a>
+        <a class="btn-getstarted" href="tel:9400273143"> <i style="margin-right: 4px;" class="fa fa-phone"></i>Contact Us</a>
+        <a class="btn-getstarted" href="course-form.html">Apply Now</a>
       </div>
 
 
@@ -124,7 +166,7 @@
                     </p>
     
                     <div class="hero-buttons">
-                      <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
+                      <a href="courses.html" class="btn btn-primary me-0 me-sm-2 mx-1">Our Courses</a>
                       <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
                         <i class="bi bi-play-circle me-1"></i>
                         Watch Campus Tour
@@ -173,7 +215,7 @@
                     </p>
     
                     <div class="hero-buttons">
-                      <a href="#programs" class="btn btn-primary me-0 me-sm-2 mx-1">Explore Programs</a>
+                      <a href="courses.html" class="btn btn-primary me-0 me-sm-2 mx-1">Explore Programs</a>
                       <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
                         <i class="bi bi-play-circle me-1"></i>
                         Student Success Stories
@@ -222,7 +264,7 @@
                     </p>
     
                     <div class="hero-buttons">
-                      <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Learn More</a>
+                      <a href="courses.html" class="btn btn-primary me-0 me-sm-2 mx-1">All Courses</a>
                       <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
                         <i class="bi bi-play-circle me-1"></i>
                         Watch Our Story
@@ -513,177 +555,36 @@
 
 
         <!-- Courses Section -->
-  <section id="courses" class="pricing section light-background">
+        <section id="courses" class="pricing section light-background">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Our Courses</h2>
-      <p>Explore a wide range of programs designed to empower your academic and professional growth.</p>
-    </div><!-- End Section Title -->
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <!-- Swiper Container -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-
-          <!-- Course Card 1 -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <h3>Bachelor of Computer Science</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">12,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Build a strong foundation in programming, data structures, and artificial intelligence to excel in the tech industry.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Advanced Programming</li>
-                <li><i class="bi bi-check-circle-fill"></i> Artificial Intelligence</li>
-                <li><i class="bi bi-check-circle-fill"></i> Data Structures</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-primary">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 1 -->
-
-          <!-- Course Card 2 (Most Popular) -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <div class="popular-badge">Most Popular</div>
-              <h3>MBA in Business Administration</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">15,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Enhance your leadership skills and business acumen with our globally recognized MBA program.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Strategic Management</li>
-                <li><i class="bi bi-check-circle-fill"></i> Marketing Strategies</li>
-                <li><i class="bi bi-check-circle-fill"></i> Financial Analysis</li>
-                <li><i class="bi bi-check-circle-fill"></i> International Business</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-light">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 2 -->
-
-          <!-- Course Card 3 -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <h3>Master of Data Science</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">18,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Acquire advanced skills in data analysis, machine learning, and big data technologies to thrive in a data-driven world.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Machine Learning</li>
-                <li><i class="bi bi-check-circle-fill"></i> Big Data Technologies</li>
-                <li><i class="bi bi-check-circle-fill"></i> Data Visualization</li>
-                <li><i class="bi bi-check-circle-fill"></i> Predictive Analytics</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-primary">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 3 -->
-
-          <!-- Course Card 4 -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <h3>Master of Public Health</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">16,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Focus on epidemiology, public health policy, and global health initiatives to make a meaningful impact.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Epidemiology</li>
-                <li><i class="bi bi-check-circle-fill"></i> Health Policy</li>
-                <li><i class="bi bi-check-circle-fill"></i> Biostatistics</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-primary">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 4 -->
-
-          <!-- Course Card 5 -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <h3>Master of Fine Arts</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">14,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Enhance your creative skills in visual arts, creative writing, and performing arts with our MFA program.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Creative Writing</li>
-                <li><i class="bi bi-check-circle-fill"></i> Visual Arts</li>
-                <li><i class="bi bi-check-circle-fill"></i> Performing Arts</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-primary">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 5 -->
-
-          <!-- Course Card 6 -->
-          <div class="swiper-slide">
-            <div class="pricing-card">
-              <h3>Bachelor of Psychology</h3>
-              <div class="price">
-                <span class="currency">$</span>
-                <span class="amount">11,000</span>
-                <span class="period">/ year</span>
-              </div>
-              <p class="description">Study human behavior, cognitive processes, and clinical techniques to pursue a career in psychology.</p>
-              <h4>Course Highlights:</h4>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle-fill"></i> Cognitive Psychology</li>
-                <li><i class="bi bi-check-circle-fill"></i> Research Methods</li>
-                <li><i class="bi bi-check-circle-fill"></i> Clinical Techniques</li>
-              </ul>
-              <a href="course-details.html" class="btn btn-primary">
-                Enroll Now
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div><!-- End Course Card 6 -->
-
-          <!-- Add more courses following the same structure -->
-
-        </div><!-- End Swiper Wrapper -->
-
-        <!-- Swiper Pagination (Optional) -->
-        <div class="swiper-pagination"></div>
-
-        <!-- Swiper Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-      </div><!-- End Swiper -->
-
-    </div><!-- End Container -->
-
-  </section>
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Our Courses</h2>
+            <p>Explore a wide range of programs designed to empower your academic and professional growth.</p>
+            <a href="courses.html" class="btn btn-cta-primary">See  All Courses</a>
+          </div><!-- End Section Title -->
+        
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper" id="courses-wrapper">
+                <!-- Course cards will be dynamically generated here -->
+              </div><!-- End Swiper Wrapper -->
+        
+              <!-- Swiper Pagination (Optional) -->
+              <div class="swiper-pagination"></div>
+        
+              <!-- Swiper Navigation Buttons -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+        
+            </div><!-- End Swiper -->
+        
+          </div><!-- End Container -->
+        
+        </section>
+        
     
     
     
@@ -1513,6 +1414,238 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+
+  <script>
+
+const coursesData = [
+{
+    "name": "B.E. Automobile Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": false,
+    "description": "Fundamentals of automobile design and maintenance.",
+    "features": [
+      "Automobile design workshops",
+      "Practical vehicle diagnostics",
+      "Internships with top manufacturers"
+    ]
+  },
+  {
+    "name": "B.E. Civil Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Planning, designing, and overseeing construction projects.",
+    "features": [
+      "Structural engineering training",
+      "Surveying with modern tools",
+      "Hands-on infrastructure projects"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on programming, cybersecurity, and data systems.",
+    "features": [
+      "Programming hackathons",
+      "Cybersecurity specialization",
+      "AI and machine learning exposure"
+    ]
+  },
+  {
+    "name": "B.Sc. Nautical Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Navigation and maritime operations training.",
+    "features": [
+      "Navigation simulation labs",
+      "Maritime safety training",
+      "Onboard ship internships"
+    ]
+  },
+  {
+    "name": "SSLC (Secondary School Leaving Certificate)",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Foundational certification for 10th-grade education.",
+    "features": [
+      "Focus on basic sciences and mathematics",
+      "Preparation for higher education",
+      "Core subject assessments"
+    ]
+  },
+  {
+    "name": "12th Board Examination",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Preparatory education for undergraduate studies.",
+    "features": [
+      "Specializations in science, commerce, and arts",
+      "Advanced subject concepts",
+      "Higher education career guidance"
+    ]
+  },
+  {
+    "name": "M.B.A. Business Analytics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Data-driven decision-making and business intelligence.",
+    "features": [
+      "Hands-on analytics projects",
+      "Training in business tools like Power BI",
+      "Real-world case studies"
+    ]
+  },
+  {
+    "name": "M.Tech Artificial Intelligence",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized training in AI, ML, and neural networks.",
+    "features": [
+      "Deep learning applications",
+      "AI-driven project labs",
+      "Exposure to real-world AI systems"
+    ]
+  },
+  {
+    "name": "Diploma in Animation",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Learn 2D and 3D animation techniques.",
+    "features": [
+      "3D modeling software training",
+      "Animation storytelling workshops",
+      "Portfolio development"
+    ]
+  },
+  {
+    "name": "Certificate in Travel & Tourism",
+    "category": "certificate",
+    "time": "6 months",
+    "featured": false,
+    "description": "Basics of travel planning and tourism management.",
+    "features": [
+      "Destination management training",
+      "Customer service skills",
+      "Exposure to travel agency tools"
+    ]
+  },
+  {
+    "name": "B.Sc. Game Design & Development",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Design and develop engaging games.",
+    "features": [
+      "Game engine programming",
+      "3D game design tools",
+      "Team-based game projects"
+    ]
+  },
+  {
+    "name": "B.Sc. Fashion and Apparel Merchandising",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of fashion industry trends and apparel production.",
+    "features": [
+      "Fashion design software training",
+      "Industry-based internships",
+      "Trend forecasting workshops"
+    ]
+  },
+  {
+    "name": "B.B.A. Logistics and Supply Chain Management",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Operations and logistics management for shipping industries.",
+    "features": [
+      "Global supply chain simulations",
+      "Field training at logistics hubs",
+      "Exposure to ERP software"
+    ]
+  },
+  {
+    "name": "M.Sc. Data Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Learn big data analytics and machine learning.",
+    "features": [
+      "Python and R programming",
+      "Data visualization tools",
+      "Projects on real-world data sets"
+    ]
+  },
+  {
+    "name": "Diploma in Fire and Industrial Safety",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": false,
+    "description": "Focus on fire safety and risk management in industries.",
+    "features": [
+      "Practical safety drills",
+      "Fire hazard simulation training",
+      "Industry certifications"
+    ]
+  }
+]
+
+// Render Courses Function
+function renderCourses() {
+  const coursesWrapper = document.getElementById('courses-wrapper');
+  coursesWrapper.innerHTML = '';
+
+  coursesData.forEach((course, index) => {
+    const featuresList = course.features
+      .map(feature => `<li><i class="bi bi-check-circle-fill"></i> ${feature}</li>`)
+      .join('');
+
+    const isPopular = index === 1 ? '<div class="popular-badge">Most Popular</div>' : '';
+
+    const courseHTML = `
+      <div class="swiper-slide">
+        <div class="pricing-card">
+          ${isPopular}
+          <h3>${course.name}</h3>
+          <div class="price">
+            <span class="currency"></span>
+            <span class="amount">${course.time}</span>
+            <span class="period">/ duration</span>
+          </div>
+          <p class="description">${course.description}</p>
+          <h4>Course Highlights:</h4>
+          <ul class="features-list">
+            ${featuresList}
+          </ul>
+          <a href="course-form.html" class="btn btn-primary mt-3">
+            Enroll Now <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    `;
+
+    coursesWrapper.insertAdjacentHTML('beforeend', courseHTML);
+  });
+
+  // Initialize Swiper after rendering
+}
+
+renderCourses();
+
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <!-- Vendor JS Files -->
