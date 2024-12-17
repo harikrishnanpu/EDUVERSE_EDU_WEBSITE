@@ -669,7 +669,190 @@
       "Fire hazard simulation training",
       "Industry certifications"
     ]
+  },
+  [
+  {
+    "name": "B.Com",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Honours degree focusing on advanced commerce concepts.",
+    "features": [
+      "Accounting and finance modules",
+      "Advanced economics studies",
+      "Preparation for corporate careers"
+    ]
+  },
+  {
+    "name": "B.Sc. Biomedical Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Focused study on biomedical sciences and research.",
+    "features": [
+      "Lab-based biological training",
+      "Research-focused projects",
+      "Exposure to medical advancements"
+    ]
+  },
+  {
+    "name": "B.Sc. Botany",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of plants, ecosystems, and environment.",
+    "features": [
+      "Field research opportunities",
+      "Botanical labs and analysis",
+      "Study of environmental conservation"
+    ]
+  },
+  {
+    "name": "B.Sc. Chemistry",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Deep dive into chemical sciences and lab applications.",
+    "features": [
+      "Hands-on laboratory work",
+      "Chemical reactions and analysis",
+      "Focus on organic and inorganic chemistry"
+    ]
+  },
+  {
+    "name": "B.Sc. Computer Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Comprehensive computer programming and systems training.",
+    "features": [
+      "Programming in C++, Java, Python",
+      "System architecture and AI",
+      "Software development projects"
+    ]
+  },
+  {
+    "name": "B.Sc. Electronics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Training in electronic systems, circuits, and devices.",
+    "features": [
+      "Practical electronics lab sessions",
+      "Circuit analysis and design",
+      "Embedded systems exposure"
+    ]
+  },
+  {
+    "name": "B.Sc. Mathematics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Mathematics theories, applications, and research.",
+    "features": [
+      "Advanced calculus and algebra",
+      "Problem-solving workshops",
+      "Analytical skills development"
+    ]
+  },
+  {
+    "name": "B.Sc. Physics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of physical phenomena, theories, and experiments.",
+    "features": [
+      "Practical lab experiments",
+      "Quantum and classical mechanics",
+      "Exposure to advanced physics theories"
+    ]
+  },
+  {
+    "name": "B.Sc. Zoology",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Focus on animal sciences, evolution, and biodiversity.",
+    "features": [
+      "Animal physiology labs",
+      "Field studies in zoology",
+      "Research in biodiversity"
+    ]
+  },
+  {
+    "name": "B.Sc. Life Sciences",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Foundational course in biological sciences and ecosystems.",
+    "features": [
+      "Core biology modules",
+      "Research in ecology and evolution",
+      "Practical lab sessions"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology & Mathematical Innovations",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on IT innovations and mathematical applications.",
+    "features": [
+      "Advanced programming skills",
+      "Applied mathematics modules",
+      "Real-world IT innovations projects"
+    ]
+  },
+  {
+    "name": "B.A. Economics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of micro and macroeconomic theories and applications.",
+    "features": [
+      "Analytical economics training",
+      "Financial market studies",
+      "Policy-making case studies"
+    ]
+  },
+  {
+    "name": "B.A. English",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Literature, linguistics, and critical analysis training.",
+    "features": [
+      "Classic and modern literature studies",
+      "Creative writing workshops",
+      "Critical thinking development"
+    ]
+  },
+  {
+    "name": "B.A. Political Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Exploration of political systems, theories, and governance.",
+    "features": [
+      "Study of global political systems",
+      "Public administration training",
+      "Policy-making simulations"
+    ]
+  },
+  {
+    "name": "B.A. History",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Study of global and regional historical events and trends.",
+    "features": [
+      "Historical research projects",
+      "Analysis of major civilizations",
+      "Hands-on historical case studies"
+    ]
   }
+]
+
   ];
 
   coursesData.forEach((course, idx) => {
@@ -746,17 +929,14 @@
 $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbxfgKLDUt65I0JUMIzJ-c1-Xz68nyU6hzt0keFR9DBwH8GA8EbZ-PFiDmKb8dRjjwau/exec",
+                url:"https://script.google.com/macros/s/AKfycbxb1F8xI97RyCw5p12tNxVBV4cW1riW-NLA87FpWVzgsw9lyJuqfVCnN6ttbgwyB3OA/exec",
                 data:$("#submit-form").serialize(),
                 method:"post",
+                mode: 'no-cors',
                 success:function (response){
                     alert("Form submitted successfully")
                     window.location.reload()
                     //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
                 }
             })
         })
