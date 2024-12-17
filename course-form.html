@@ -1109,69 +1109,74 @@
 
   ];
 
-
-  coursesData.forEach((course) => {
+  // Populate the course select options
+coursesData.forEach((course) => {
   const option = document.createElement('option');
   option.value = course.name; // Use course name as the value
   option.textContent = course.name;
   courseSelect.appendChild(option);
 });
 
+// Get DOM elements
 const courseDetailsCard = document.getElementById('courseDetailsCard');
 const courseNameEl = document.getElementById('courseName');
 const courseDescriptionEl = document.getElementById('courseDescription');
 const courseTimeEl = document.getElementById('courseTime');
 const courseFeaturesList = document.getElementById('courseFeaturesList');
 
-if (selectedCourseName) {
-  // Find the course by its name
-  const selectedCourse = coursesData.find(
-    (course) => course.name.toLowerCase() === selectedCourseName.toLowerCase()
-  );
+// Function to display course details
+function displayCourseDetails(course) {
+  courseNameEl.textContent = course.name;
+  courseDescriptionEl.textContent = course.description;
+  courseTimeEl.textContent = course.time;
 
-  if (selectedCourse) {
-    // Set the courseSelect value to the course name
-    courseSelect.value = selectedCourse.name;
+  // Populate course features
+  courseFeaturesList.innerHTML = '';
+  course.features.forEach((feature) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+    courseFeaturesList.appendChild(li);
+  });
 
-    courseNameEl.textContent = selectedCourse.name;
-    courseDescriptionEl.textContent = selectedCourse.description;
-    courseTimeEl.textContent = selectedCourse.time;
-
-    // Populate course features
-    courseFeaturesList.innerHTML = '';
-    selectedCourse.features.forEach((feature) => {
-      const li = document.createElement('li');
-      li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
-      courseFeaturesList.appendChild(li);
-    });
-
-    courseDetailsCard.style.display = 'block';
-  }
-
-  // Trigger change event when course is auto-selected
-  courseSelect.dispatchEvent(new Event('change'));
+  courseDetailsCard.style.display = 'block';
 }
 
+// Function to handle course selection
+function handleCourseSelection(selectedCourseName) {
+  if (selectedCourseName) {
+    // Find the course by its name (case-insensitive)
+    const selectedCourse = coursesData.find(
+      (course) => course.name.toLowerCase() === selectedCourseName.toLowerCase()
+    );
 
-  // Display selected course details
-  courseSelect.addEventListener('change', () => {
-    const idx = courseSelect.value;
-    if (idx !== "") {
-      const selectedCourse = coursesData[idx];
-      courseNameEl.textContent = selectedCourse.name;
-      courseDescriptionEl.textContent = selectedCourse.description;
-      courseTimeEl.textContent = selectedCourse.time;
-      courseFeaturesList.innerHTML = '';
-      selectedCourse.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
-        courseFeaturesList.appendChild(li);
-      });
-      courseDetailsCard.style.display = 'block';
+    if (selectedCourse) {
+      displayCourseDetails(selectedCourse);
     } else {
       courseDetailsCard.style.display = 'none';
     }
-  });
+  } else {
+    courseDetailsCard.style.display = 'none';
+  }
+}
+
+// Initial load: check if there's a pre-selected course
+if (selectedCourseName) {
+  // Set the courseSelect value to the course name
+  courseSelect.value = selectedCourseName;
+  
+  // Display details for the pre-selected course
+  handleCourseSelection(selectedCourseName);
+  
+  // Optionally, trigger the change event if other listeners need to respond
+  // courseSelect.dispatchEvent(new Event('change'));
+}
+
+// Event listener for course selection changes
+courseSelect.addEventListener('change', (event) => {
+  const selectedCourseName = event.target.value;
+  handleCourseSelection(selectedCourseName);
+});
+
 
 
     const formData = {
