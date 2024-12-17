@@ -1112,7 +1112,7 @@
 
   coursesData.forEach((course, idx) => {
     const option = document.createElement('option');
-    option.value = idx;
+    option.value = course.name;
     option.textContent = course.name;
     courseSelect.appendChild(option);
   });
@@ -1226,7 +1226,7 @@ $("#submit-form").submit((e) => {
 
   // Submit the form
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbxb1F8xI97RyCw5p12tNxVBV4cW1riW-NLA87FpWVzgsw9lyJuqfVCnN6ttbgwyB3OA/exec",
+    url: "https://script.google.com/macros/s/AKfycbxWtGhLpK3IpXNpIM4mRwDhfbuFfkAzvnMjUgaDAh30CCc7wYw8_0cWtTlXqeWHffvvNQ/exec",
     data: $("#submit-form").serialize(),
     method: "post",
     success: function (response) {
