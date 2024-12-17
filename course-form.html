@@ -360,7 +360,7 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <script>
+  <!-- <script>
     // Course data (can be fetched from the server if needed)
     const coursesData = [
       {
@@ -472,7 +472,7 @@
         ]
       }
     ];
-  </script>
+  </script> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -486,9 +486,12 @@
   <script src="assets/js/main.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
   // Populate course dropdown
   const courseSelect = document.getElementById('courseSelect');
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCourseName = urlParams.get('course'); // "course" is the query parameter
+
   const coursesData = [
   {
     "name": "B.E. Automobile Engineering",
@@ -670,7 +673,6 @@
       "Industry certifications"
     ]
   },
-  [
   {
     "name": "B.Com",
     "category": "bachelors",
@@ -850,10 +852,155 @@
       "Analysis of major civilizations",
       "Hands-on historical case studies"
     ]
+  },
+
+  {
+    "name": "M.Sc. Biochemistry",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced study of biochemical processes and molecular biology.",
+    "features": [
+      "Research in enzymes and proteins",
+      "Hands-on lab experiments",
+      "Molecular biology techniques"
+    ]
+  },
+  {
+    "name": "M.Sc. Chemistry",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "In-depth study of organic, inorganic, and physical chemistry.",
+    "features": [
+      "Practical lab-based training",
+      "Organic and inorganic synthesis",
+      "Advanced analytical techniques"
+    ]
+  },
+  {
+    "name": "M.Sc. Mathematics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Study of advanced mathematical theories and applications.",
+    "features": [
+      "Advanced calculus and algebra",
+      "Mathematical modeling",
+      "Theoretical and applied research"
+    ]
+  },
+  {
+    "name": "M.Sc. Physics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced physics concepts, research, and experimentation.",
+    "features": [
+      "Quantum and classical mechanics",
+      "Advanced optics and electronics",
+      "Hands-on laboratory training"
+    ]
+  },
+  {
+    "name": "M.Sc. Botany",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Focus on plant sciences, biodiversity, and research.",
+    "features": [
+      "Field-based research opportunities",
+      "Laboratory-based plant analysis",
+      "Environmental conservation studies"
+    ]
+  },
+  {
+    "name": "M.Sc. Zoology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced study of animal sciences, evolution, and biodiversity.",
+    "features": [
+      "Research in animal physiology",
+      "Hands-on field studies",
+      "Study of evolution and ecosystems"
+    ]
+  },
+  {
+    "name": "M.A. English",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Study of advanced English literature and critical theory.",
+    "features": [
+      "Literary analysis workshops",
+      "Creative writing projects",
+      "Research in literary history"
+    ]
+  },
+  {
+    "name": "M.A. History",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Study of historical events, civilizations, and their impacts.",
+    "features": [
+      "Research on historical trends",
+      "Case studies on civilizations",
+      "Workshops on historical methods"
+    ]
+  },
+  {
+    "name": "M.A. Political Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced understanding of political systems and governance.",
+    "features": [
+      "Global political systems studies",
+      "Policy-making and administration",
+      "International relations modules"
+    ]
+  },
+  {
+    "name": "M.Com.",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Master's degree in commerce with focus on business studies and finance.",
+    "features": [
+      "Advanced accounting and finance",
+      "Research in commerce theories",
+      "Case studies on business management"
+    ]
+  },
+  {
+    "name": "M.A. Economics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Comprehensive study of economic theories, policies, and systems.",
+    "features": [
+      "Macroeconomics and microeconomics",
+      "Policy research projects",
+      "Data-driven economic analysis"
+    ]
+  },
+  {
+    "name": "M.Sc. Microbiology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Study of microorganisms, their behavior, and applications.",
+    "features": [
+      "Microbial research projects",
+      "Hands-on lab experiments",
+      "Industrial applications of microbiology"
+    ]
   }
-]
 
   ];
+
 
   coursesData.forEach((course, idx) => {
     const option = document.createElement('option');
@@ -867,6 +1014,35 @@
   const courseDescriptionEl = document.getElementById('courseDescription');
   const courseTimeEl = document.getElementById('courseTime');
   const courseFeaturesList = document.getElementById('courseFeaturesList');
+
+
+
+
+  if (selectedCourseName) {
+    const selectedCourseIndex = coursesData.findIndex(course => course.name.toLowerCase() === selectedCourseName.toLowerCase());
+    if (selectedCourseIndex > -1) {
+      courseSelect.value = selectedCourseIndex;
+
+      const selectedCourse = coursesData[selectedCourseIndex];
+      courseNameEl.textContent = selectedCourse.name;
+      courseDescriptionEl.textContent = selectedCourse.description;
+      courseTimeEl.textContent = selectedCourse.time;
+
+      // Populate course features
+      courseFeaturesList.innerHTML = '';
+      selectedCourse.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+        courseFeaturesList.appendChild(li);
+      });
+
+      courseDetailsCard.style.display = 'block';
+    }
+
+      // Trigger change event when course is auto-selected
+  courseSelect.dispatchEvent(new Event('change'));
+  }
+
 
   // Display selected course details
   courseSelect.addEventListener('change', () => {
@@ -926,20 +1102,36 @@
 
 
 
-$("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbxb1F8xI97RyCw5p12tNxVBV4cW1riW-NLA87FpWVzgsw9lyJuqfVCnN6ttbgwyB3OA/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                mode: 'no-cors',
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    //window.location.href="https://google.com"
-                }
-            })
-        })
+$("#submit-form").submit((e) => {
+  e.preventDefault();
+
+  // Show the success modal
+  const showSuccessModal = () => {
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+
+    // Redirect after 2 seconds
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
+  };
+
+  // Submit the form
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxb1F8xI97RyCw5p12tNxVBV4cW1riW-NLA87FpWVzgsw9lyJuqfVCnN6ttbgwyB3OA/exec",
+    data: $("#submit-form").serialize(),
+    method: "post",
+    success: function (response) {
+      // Show success modal on successful submission
+      showSuccessModal();
+    },
+    error: function () {
+      // Show success modal even if there's an error
+      showSuccessModal();
+    },
+  });
+});
+
 
 </script>
 

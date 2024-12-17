@@ -1410,12 +1410,16 @@ function renderCourses(container, courses) {
       card.appendChild(featuresList);
     }
 
-    // Enroll Button
-    const enrollBtn = document.createElement('a');
-    enrollBtn.href = 'course-form.html';
-    enrollBtn.className = 'btn btn-primary mt-3';
-    enrollBtn.innerHTML = `Enroll Now <i class="bi bi-arrow-right"></i>`;
-    card.appendChild(enrollBtn);
+// Enroll Button
+const enrollBtn = document.createElement('a');
+
+// Append the selected course as a query parameter
+const courseNameParam = encodeURIComponent(course.name); // Ensures the course name is URL-safe
+enrollBtn.href = `course-form.html?course=${courseNameParam}`;
+
+enrollBtn.className = 'btn btn-primary mt-3';
+enrollBtn.innerHTML = `Enroll Now <i class="bi bi-arrow-right"></i>`;
+card.appendChild(enrollBtn);
 
     // Append card to column
     col.appendChild(card);
