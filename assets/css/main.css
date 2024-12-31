@@ -1497,6 +1497,7 @@ section,
 @media (max-width: 500px){
 
   .hero .btn-cta-primary{
+    margin-top: 6px !important;
     margin-bottom: 0px !important;
   }
 
