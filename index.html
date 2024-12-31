@@ -423,7 +423,7 @@
                   <div class="contact-info d-flex align-items-center gap-2">
                     <i class="bi bi-telephone-fill"></i>
                     <div>
-                      <p class="contact-label">Call us anytime</p>
+                      <p class="contact-label">Get In Touch With Us</p>
                       <p class="contact-number">+91 9400273143 </p>
                     </div>
                   </div>
@@ -1435,8 +1435,8 @@
   <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
   <script>
     var wa_btnSetting = {
-      "btnColor": "#16BE45",
-      "ctaText": "Whatsapp Us",
+      "btnColor": "#312b7d",
+      "ctaText": "Chat With Us",
       "cornerRadius": 40,
       "marginBottom": 14,
       "marginLeft": 20,
@@ -1910,7 +1910,7 @@ document.addEventListener('DOMContentLoaded', function() {
     strings: ["Your Future Starts Here", "Learn and Grow", "Achieve Excellence"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 4000,
     loop: true
   });
 
@@ -1918,7 +1918,7 @@ document.addEventListener('DOMContentLoaded', function() {
     strings: ["Excellence in Education", "Discover New Horizons", "Empower Your Skills"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 4000,
     loop: true
   });
 
@@ -1926,7 +1926,7 @@ document.addEventListener('DOMContentLoaded', function() {
     strings: ["Innovation at Its Peak", "A World of Opportunities", "Be a Global Leader"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 4000,
     loop: true
   });
 });
@@ -1990,7 +1990,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       AOS.init({
-        duration:500,
+        duration: 1000,
         once:true,
       });
     });
@@ -2086,7 +2086,7 @@ document.addEventListener('DOMContentLoaded', function() {
           spaceBetween: 30,
         },
       },
-      speed: 1000, // Transition speed in ms
+      speed: 2000, // Transition speed in ms
       effect: 'slide', // Transition effect
     });
 
@@ -2125,6 +2125,25 @@ document.addEventListener('DOMContentLoaded', function() {
       updatePopularClass();
     });
   });
+
+
+  const button = document.getElementById('wa_btn-content');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+
+  if (scrollTop > 10) {
+    button.classList.add('scroll-active');
+    button.classList.remove('scroll-top');
+  } else {
+    button.classList.add('scroll-top');
+    button.classList.remove('scroll-active');
+  }
+
+  lastScrollTop = scrollTop;
+});
+
 
 </script>
 
