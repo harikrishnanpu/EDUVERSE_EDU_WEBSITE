@@ -175,11 +175,12 @@
                     </p>
     
                     <div class="hero-buttons">
-                      <a href="courses.html" class="btn btn-primary me-0 me-sm-2 mx-1">Our Courses</a>
-                      <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
+                      <a href="credit-transfer.html" class="btn btn-primary me-0 me-sm-2 mx-1">Credit Transfer Degree</a>
+                      <a href="courses.html" class="btn btn-cta-primary me-0 me-sm-2 mx-1">Our Courses</a>
+                      <!-- <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
                         <i class="bi bi-play-circle me-1"></i>
                         Watch Campus Tour
-                      </a>
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -274,6 +275,58 @@
     
                     <div class="hero-buttons">
                       <a href="courses.html" class="btn btn-primary me-0 me-sm-2 mx-1">All Courses</a>
+                      <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
+                        <i class="bi bi-play-circle me-1"></i>
+                        Watch Our Story
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                    <img src="assets/img/webbanner3.jpg" alt="Global Learning Image" class="img-fluid">
+                    <div class="customers-badge">
+                      <div class="customer-avatars">
+                        <img src="assets/img/student.jpg" alt="Student 1" class="avatar">
+                        <img src="assets/img/student.jpg" alt="Student 2" class="avatar">
+                        <img src="assets/img/student.jpg" alt="Student 3" class="avatar">
+                        <img src="assets/img/student.jpg" alt="Student 4" class="avatar">
+                        <img src="assets/img/student.jpg" alt="Student 5" class="avatar">
+                        <span class="avatar more">2k+</span>
+                      </div>
+                      <p class="mb-0 mt-2">Learn and grow with global peers.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- swipper 4 dec 31 -->
+
+
+            <div class="swiper-slide">
+              <div class="row align-items-center">
+                <div class="col-md-6 ">
+                  <div class="hero-content">
+                    <div class="company-badge mb-4">
+                      <i class="bi bi-gear-fill fa-spin me-2"></i>
+                      Why Let A Setback Define Your Future?
+
+                    </div>
+    
+                    <h1 class="mb-4">
+                      Transfer Your Credits And <br>
+                      Restart Your Academic Journey<br>
+                      <span class="accent-text">With Eduverse</span><br>
+                      <span class="typed-text" id="typed-hero-3"></span>
+                    </h1>
+    
+                    <p class="mb-4 mb-md-5">
+                      Degree credit transfer programs offer a streamlined path for students looking to continue their education at a different institution without losing the progress they've made. These programs enable students to transfer credits from one educational institution to another, ensuring a smooth transition and saving both time and money.
+                    </p>
+    
+                    <div class="hero-buttons">
+                      <a href="credit-transfer.html" class="btn btn-primary me-0 me-sm-2 mx-1">Credit Transfer Degree</a>
                       <a href="#" class="btn btn-link mt-2 mt-sm-0 glightbox" data-gallery="video-gallery">
                         <i class="bi bi-play-circle me-1"></i>
                         Watch Our Story
@@ -467,7 +520,12 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="display-4 mb-4">Shape Your Future with EDUVERSE</h2>
             <p class="mb-4">
-              Join a global community of learners. Discover programs designed to equip you with skills for a successful career. Take the first step today.
+              Why Let A Setback Define Your Future?
+              Transfer Your Credits And Restart Your Academic Journey
+
+              <br/><br/>
+
+              Degree credit transfer programs offer a streamlined path for students looking to continue their education at a different institution without losing the progress they've made. These programs enable students to transfer credits from one educational institution to another, ensuring a smooth transition and saving both time and money.
             </p>
             <div class="cta-buttons">
               <a href="credit-transfer.html" class="btn btn-cta-primary me-3">Credit Transfer</a>
@@ -1913,14 +1971,12 @@ renderCourses();
 
 
   <script>
-
-
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
   new Typed('#typed-hero-1', {
     strings: ["Your Future Starts Here", "Learn and Grow", "Achieve Excellence"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 4000,
+    backDelay: 6000,
     loop: true
   });
 
@@ -1928,7 +1984,7 @@ document.addEventListener('DOMContentLoaded', function() {
     strings: ["Excellence in Education", "Discover New Horizons", "Empower Your Skills"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 4000,
+    backDelay: 6000,
     loop: true
   });
 
@@ -1936,74 +1992,52 @@ document.addEventListener('DOMContentLoaded', function() {
     strings: ["Innovation at Its Peak", "A World of Opportunities", "Be a Global Leader"],
     typeSpeed: 50,
     backSpeed: 30,
-    backDelay: 4000,
+    backDelay: 6000,
     loop: true
+  });
+
+  // Initialize hero swiper
+  var heroSwiper = new Swiper('.hero-swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000, // Increased delay to 4000ms (4 seconds)
+    }
+  });
+
+  // Initialize courses swiper
+  var coursesSwiper = new Swiper('.swiper-courses', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 6000, // Increased delay to 6000ms (6 seconds)
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+
+  AOS.init({
+    duration: 1000,
+    once: true,
   });
 });
 
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize hero swiper
-      var heroSwiper = new Swiper('.hero-swiper', {
-        loop:true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable:true,
-        },
-        autoplay: {
-          delay:4000,
-        }
-      });
-
-      // Typed.js for hero slides
-
-      // Typed.js for courses title
-      // new Typed('#typed-courses', {
-      //   strings: ["Our Featured Courses", "Discover Your Path"],
-      //   typeSpeed: 50,
-      //   backSpeed: 30,
-      //   backDelay: 2000,
-      //   loop: true
-      // });
-
-      // Typed.js for stats subtitle
-      // new Typed('#typed-stats-subtitle', {
-      //   strings: ["Our Achievements at a Glance", "Numbers That Speak For Us"],
-      //   typeSpeed: 50,
-      //   backSpeed: 30,
-      //   backDelay: 2000,
-      //   loop: true
-      // });
-
-      // Initialize courses swiper
-      var coursesSwiper = new Swiper('.swiper-courses', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        autoplay: {
-          delay:4000,
-        },
-        slidesPerView:1,
-        spaceBetween:20,
-        breakpoints: {
-          640: {
-            slidesPerView:2,
-            spaceBetween:50
-          },
-          992: {
-            slidesPerView:3,
-            spaceBetween:40
-          }
-        }
-      });
-
-      AOS.init({
-        duration: 1000,
-        once:true,
-      });
-    });
   </script>
 
   

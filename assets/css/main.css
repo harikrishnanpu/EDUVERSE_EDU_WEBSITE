@@ -1495,6 +1495,11 @@ section,
 }
 
 @media (max-width: 500px){
+
+  .hero .btn-cta-primary{
+    margin-bottom: 0px !important;
+  }
+
   .btn-cta-primary{
     margin-bottom: 20px !important;
   }
