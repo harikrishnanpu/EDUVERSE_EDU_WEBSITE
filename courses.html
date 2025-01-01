@@ -401,7 +401,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="index.html#features">Why Us?</a></li>
           <li><a href="courses.html" class="active">Our Courses</a></li>
           <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -470,13 +470,13 @@
                 <a class="nav-link active show" data-category="all" href="#">All</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-category="undergraduate" href="#">Undergraduate</a>
+                <a class="nav-link" data-category="masters" href="#">Master's Degree</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-category="bachelors" href="#">Bachelor's Degree</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-category="masters" href="#">Master's Degree</a>
+                <a class="nav-link" data-category="undergraduate" href="#">Pre Univeristy</a>
               </li>
             </ul>
           </div>
@@ -592,8 +592,8 @@
           <h4>Degree & Diploma</h4>
           <ul>
             <li><a href="course-form.html?course=B.Com">B.Com</a></li>
-            <li><a href="course-form.html?course=B.C.A.">B.C.A.</a></li>
-            <li><a href="course-form.html?course=M.C.A.">M.C.A.</a></li>
+            <li><a href="course-form.html?course=B C A">B C A</a></li>
+            <li><a href="course-form.html?course=M C A">M C A</a></li>
             <li><a href="course-form.html?course=B.Ed.">B.Ed.</a></li>
             <li><a href="course-form.html?course=M.Ed.">M.Ed.</a></li>
           </ul>
@@ -726,15 +726,27 @@
   
       const coursesData = [
   {
+    "name": "B.E. Automobile Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Fundamentals of automobile design and maintenance.",
+    "features": [
+      "Automobile design workshops",
+      "Practical vehicle diagnostics",
+      "Internships with top manufacturers"
+    ]
+  },
+  {
     "name": "B.E. Civil Engineering",
     "category": "bachelors",
     "time": "4 years",
     "featured": true,
     "description": "Planning, designing, and overseeing construction projects.",
     "features": [
-      "Structural engineering design",
-      "Surveying with advanced tools",
-      "Hands-on projects for sustainable infrastructure"
+      "Structural engineering training",
+      "Surveying with modern tools",
+      "Hands-on infrastructure projects"
     ]
   },
   {
@@ -744,9 +756,33 @@
     "featured": true,
     "description": "Focus on programming, cybersecurity, and data systems.",
     "features": [
-      "Specialized AI and ML modules",
-      "Training in cybersecurity techniques",
-      "Capstone project in emerging technologies"
+      "Programming hackathons",
+      "Cybersecurity specialization",
+      "AI and machine learning exposure"
+    ]
+  },
+  {
+    "name": "SSLC (10th)",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Foundational certification for 10th-grade education.",
+    "features": [
+      "Focus on basic sciences and mathematics",
+      "Preparation for higher education",
+      "Core subject assessments"
+    ]
+  },
+  {
+    "name": "Plus Two (12th)",
+    "category": "undergraduate",
+    "time": "1 year",
+    "featured": true,
+    "description": "Preparatory education for undergraduate studies.",
+    "features": [
+      "Specializations in science, commerce, and arts",
+      "Advanced subject concepts",
+      "Higher education career guidance"
     ]
   },
   {
@@ -756,33 +792,33 @@
     "featured": true,
     "description": "Data-driven decision-making and business intelligence.",
     "features": [
-      "Hands-on data analysis projects",
-      "Training in data visualization tools",
-      "Real-world case studies for business insights"
+      "Hands-on analytics projects",
+      "Training in business tools like Power BI",
+      "Real-world case studies"
     ]
   },
   {
-    "name": "B.B.A. Shipping & Logistics Management",
-    "category": "bachelors",
-    "time": "3 years",
-    "featured": true,
-    "description": "Operations and logistics management for shipping industries.",
-    "features": [
-      "Global logistics simulations",
-      "Field training at shipping hubs",
-      "Industry partnerships with logistics leaders"
-    ]
-  },
-  {
-    "name": "M.B.A. Logistics and Supply Chain Management",
+    "name": "M.Tech Artificial Intelligence",
     "category": "masters",
     "time": "2 years",
     "featured": true,
-    "description": "Strategic planning and operations in supply chains.",
+    "description": "Specialized training in AI, ML, and neural networks.",
     "features": [
-      "Practical supply chain simulations",
-      "Advanced tools for logistics optimization",
-      "Collaboration with global supply chain experts"
+      "Deep learning applications",
+      "AI-driven project labs",
+      "Exposure to real-world AI systems"
+    ]
+  },
+  {
+    "name": "Diploma in Animation",
+    "category": "diploma",
+    "time": "1 year",
+    "featured": true,
+    "description": "Learn 2D and 3D animation techniques.",
+    "features": [
+      "3D modeling software training",
+      "Animation storytelling workshops",
+      "Portfolio development"
     ]
   },
   {
@@ -790,11 +826,23 @@
     "category": "bachelors",
     "time": "3 years",
     "featured": true,
-    "description": "Design and develop engaging and interactive games.",
+    "description": "Design and develop engaging games.",
     "features": [
-      "Training in leading game engines",
-      "Interactive storytelling workshops",
-      "Exposure to VR and AR technologies"
+      "Game engine programming",
+      "3D game design tools",
+      "Team-based game projects"
+    ]
+  },
+  {
+    "name": "B.B.A. Logistics and Supply Chain Management",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Operations and logistics management for shipping industries.",
+    "features": [
+      "Global supply chain simulations",
+      "Field training at logistics hubs",
+      "Exposure to ERP software"
     ]
   },
   {
@@ -804,12 +852,637 @@
     "featured": true,
     "description": "Learn big data analytics and machine learning.",
     "features": [
-      "Real-world data science projects",
-      "Master Python and R programming",
-      "Training in advanced statistical modeling"
+      "Python and R programming",
+      "Data visualization tools",
+      "Projects on real-world data sets"
+    ]
+  },
+  {
+    "name": "B.Com",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Honours degree focusing on advanced commerce concepts.",
+    "features": [
+      "Accounting and finance modules",
+      "Advanced economics studies",
+      "Preparation for corporate careers"
+    ]
+  },
+  {
+    "name": "B.Sc. Biomedical Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Focused study on biomedical sciences and research.",
+    "features": [
+      "Lab-based biological training",
+      "Research-focused projects",
+      "Exposure to medical advancements"
+    ]
+  },
+  {
+    "name": "B.Sc. Botany",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of plants, ecosystems, and environment.",
+    "features": [
+      "Field research opportunities",
+      "Botanical labs and analysis",
+      "Study of environmental conservation"
+    ]
+  },
+  {
+    "name": "B.Sc. Chemistry",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Deep dive into chemical sciences and lab applications.",
+    "features": [
+      "Hands-on laboratory work",
+      "Chemical reactions and analysis",
+      "Focus on organic and inorganic chemistry"
+    ]
+  },
+  {
+    "name": "B.Sc. Computer Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Comprehensive computer programming and systems training.",
+    "features": [
+      "Programming in C++, Java, Python",
+      "System architecture and AI",
+      "Software development projects"
+    ]
+  },
+  {
+    "name": "B.Sc. Electronics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Training in electronic systems, circuits, and devices.",
+    "features": [
+      "Practical electronics lab sessions",
+      "Circuit analysis and design",
+      "Embedded systems exposure"
+    ]
+  },
+  {
+    "name": "B.Sc. Mathematics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Mathematics theories, applications, and research.",
+    "features": [
+      "Advanced calculus and algebra",
+      "Problem-solving workshops",
+      "Analytical skills development"
+    ]
+  },
+  {
+    "name": "B.Sc. Physics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of physical phenomena, theories, and experiments.",
+    "features": [
+      "Practical lab experiments",
+      "Quantum and classical mechanics",
+      "Exposure to advanced physics theories"
+    ]
+  },
+  {
+    "name": "B.Sc. Zoology",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Focus on animal sciences, evolution, and biodiversity.",
+    "features": [
+      "Animal physiology labs",
+      "Field studies in zoology",
+      "Research in biodiversity"
+    ]
+  },
+  {
+    "name": "B.Sc. Life Sciences",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Foundational course in biological sciences and ecosystems.",
+    "features": [
+      "Core biology modules",
+      "Research in ecology and evolution",
+      "Practical lab sessions"
+    ]
+  },
+  {
+    "name": "B.Tech Information Technology & Mathematical Innovations",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on IT innovations and mathematical applications.",
+    "features": [
+      "Advanced programming skills",
+      "Applied mathematics modules",
+      "Real-world IT innovations projects"
+    ]
+  },
+  {
+    "name": "B.A. Economics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of micro and macroeconomic theories and applications.",
+    "features": [
+      "Analytical economics training",
+      "Financial market studies",
+      "Policy-making case studies"
+    ]
+  },
+  {
+    "name": "B.A. English",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Literature, linguistics, and critical analysis training.",
+    "features": [
+      "Classic and modern literature studies",
+      "Creative writing workshops",
+      "Critical thinking development"
+    ]
+  },
+  {
+    "name": "B.A. Political Science",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Exploration of political systems, theories, and governance.",
+    "features": [
+      "Study of global political systems",
+      "Public administration training",
+      "Policy-making simulations"
+    ]
+  },
+  {
+    "name": "B.A. History",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of global and regional historical events and trends.",
+    "features": [
+      "Historical research projects",
+      "Analysis of major civilizations",
+      "Hands-on historical case studies"
+    ]
+  },
+  {
+    "name": "M.Sc. Biochemistry",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study of biochemical processes and molecular biology.",
+    "features": [
+      "Research in enzymes and proteins",
+      "Hands-on lab experiments",
+      "Molecular biology techniques"
+    ]
+  },
+  {
+    "name": "M.Sc. Chemistry",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "In-depth study of organic, inorganic, and physical chemistry.",
+    "features": [
+      "Practical lab-based training",
+      "Organic and inorganic synthesis",
+      "Advanced analytical techniques"
+    ]
+  },
+  {
+    "name": "M.Sc. Mathematics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of advanced mathematical theories and applications.",
+    "features": [
+      "Advanced calculus and algebra",
+      "Mathematical modeling",
+      "Theoretical and applied research"
+    ]
+  },
+  {
+    "name": "M.Sc. Physics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced physics concepts, research, and experimentation.",
+    "features": [
+      "Quantum and classical mechanics",
+      "Advanced optics and electronics",
+      "Hands-on laboratory training"
+    ]
+  },
+  {
+    "name": "M.Sc. Botany",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Focus on plant sciences, biodiversity, and research.",
+    "features": [
+      "Field-based research opportunities",
+      "Laboratory-based plant analysis",
+      "Environmental conservation studies"
+    ]
+  },
+  {
+    "name": "M.Sc. Zoology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study of animal sciences, evolution, and biodiversity.",
+    "features": [
+      "Research in animal physiology",
+      "Hands-on field studies",
+      "Study of evolution and ecosystems"
+    ]
+  },
+  {
+    "name": "M A English",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of advanced English literature and critical theory.",
+    "features": [
+      "Literary analysis workshops",
+      "Creative writing projects",
+      "Research in literary history"
+    ]
+  },
+  {
+    "name": "M A History",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of historical events, civilizations, and their impacts.",
+    "features": [
+      "Research on historical trends",
+      "Case studies on civilizations",
+      "Workshops on historical methods"
+    ]
+  },
+  {
+    "name": "M A Political Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced understanding of political systems and governance.",
+    "features": [
+      "Global political systems studies",
+      "Policy-making and administration",
+      "International relations modules"
+    ]
+  },
+  {
+    "name": "M.Com.",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Master's degree in commerce with focus on business studies and finance.",
+    "features": [
+      "Advanced accounting and finance",
+      "Research in commerce theories",
+      "Case studies on business management"
+    ]
+  },
+  {
+    "name": "M A Economics",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Comprehensive study of economic theories, policies, and systems.",
+    "features": [
+      "Macroeconomics and microeconomics",
+      "Policy research projects",
+      "Data-driven economic analysis"
+    ]
+  },
+  {
+    "name": "M.Sc. Microbiology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of microorganisms, their behavior, and applications.",
+    "features": [
+      "Microbial research projects",
+      "Hands-on lab experiments",
+      "Industrial applications of microbiology"
+    ]
+  },
+  {
+    "name": "B.A. Malayalam",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of Malayalam language, literature, and cultural heritage.",
+    "features": [
+      "Focus on Malayalam literature",
+      "Linguistics and grammar studies",
+      "Research in regional cultural heritage"
+    ]
+  },
+  {
+    "name": "B.A. Hindi",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Comprehensive study of Hindi language, literature, and linguistics.",
+    "features": [
+      "Hindi poetry and prose analysis",
+      "Linguistics and grammar modules",
+      "Translation studies and creative writing"
+    ]
+  },
+  {
+    "name": "B.A. Sanskrit",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Study of Sanskrit language, literature, and classical texts.",
+    "features": [
+      "Reading of classical Sanskrit texts",
+      "Focus on Vedic and epic literature",
+      "Workshops on Sanskrit grammar and linguistics"
+    ]
+  },
+  {
+    "name": "M A Hindi",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study of Hindi literature, poetry, and linguistics.",
+    "features": [
+      "Critical analysis of Hindi texts",
+      "Research in Hindi linguistics",
+      "Workshops on contemporary Hindi literature"
+    ]
+  },
+  {
+    "name": "M A Sanskrit",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "In-depth study of Sanskrit literature, philosophy, and grammar.",
+    "features": [
+      "Focus on ancient texts and scriptures",
+      "Linguistic and philosophical analysis",
+      "Research in Sanskrit epics and poetry"
+    ]
+  },
+  {
+    "name": "B.Ed.",
+    "category": "bachelors",
+    "time": "2 years",
+    "featured": true,
+    "description": "Bachelor of Education program for aspiring educators.",
+    "features": [
+      "Pedagogical training",
+      "Hands-on teaching practice",
+      "Focus on classroom management and curriculum development"
+    ]
+  },
+  {
+    "name": "M.Ed.",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Master of Education program for advanced teaching methodologies.",
+    "features": [
+      "Advanced pedagogical theories",
+      "Research in education systems",
+      "Focus on curriculum innovation and development"
+    ]
+  },
+  {
+    "name": "M S W Master of Social Work",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in social work and community development.",
+    "features": [
+      "Fieldwork experience",
+      "Research projects",
+      "Community engagement initiatives"
+    ]
+  },
+  {
+    "name": "B S W Bachelor of Social Work",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Undergraduate program in social work and community services.",
+    "features": [
+      "Social work theory",
+      "Practical internships",
+      "Community service projects"
+    ]
+  },
+  {
+    "name": "M.Sc. Environmental Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of environmental systems and sustainable practices.",
+    "features": [
+      "Environmental impact assessments",
+      "Sustainability projects",
+      "Research in ecosystem management"
+    ]
+  },
+  {
+    "name": "B.Tech Mechanical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Comprehensive study of mechanical systems and engineering principles.",
+    "features": [
+      "Thermodynamics and fluid mechanics",
+      "CAD and CAM training",
+      "Industrial internships"
+    ]
+  },
+  {
+    "name": "B.Tech Electrical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on electrical systems, circuits, and power engineering.",
+    "features": [
+      "Circuit design and analysis",
+      "Power systems training",
+      "Hands-on lab projects"
+    ]
+  },
+  {
+    "name": "M.Tech Robotics and Automation",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in robotics, automation, and intelligent systems.",
+    "features": [
+      "Robotics design and programming",
+      "Automation systems projects",
+      "AI integration in robotics"
+    ]
+  },
+  {
+    "name": "BBA Bachelor of Business Administration",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Undergraduate program in business management and administration.",
+    "features": [
+      "Business strategy courses",
+      "Leadership and management training",
+      "Internships with leading companies"
+    ]
+  },
+  {
+    "name": "M.B.A. General Management",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Comprehensive MBA program focusing on general management skills.",
+    "features": [
+      "Strategic management workshops",
+      "Global business simulations",
+      "Leadership development programs"
+    ]
+  },
+  {
+    "name": "M S W Clinical Social Work",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized program in clinical social work and therapy.",
+    "features": [
+      "Clinical counseling techniques",
+      "Therapeutic practice sessions",
+      "Mental health research projects"
+    ]
+  },
+  {
+    "name": "B S W Community Development",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on community development and social initiatives.",
+    "features": [
+      "Community needs assessment",
+      "Project management training",
+      "Fieldwork in diverse communities"
+    ]
+  },
+  {
+    "name": "M.Sc. Biotechnology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in biotechnology and its applications.",
+    "features": [
+      "Genetic engineering projects",
+      "Bioprocessing techniques",
+      "Research in biomedical applications"
+    ]
+  },
+  {
+    "name": "B.Tech Chemical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Comprehensive study of chemical processes and engineering principles.",
+    "features": [
+      "Process design and simulation",
+      "Chemical reaction engineering",
+      "Industrial internships"
+    ]
+  },
+  {
+    "name": "B.Tech Computer Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on computer systems, hardware, and software integration.",
+    "features": [
+      "Embedded systems design",
+      "Hardware-software co-design",
+      "Hands-on lab projects"
+    ]
+  },
+  {
+    "name": "M.Sc. Artificial Intelligence",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized program in artificial intelligence and machine learning.",
+    "features": [
+      "Advanced AI algorithms",
+      "Machine learning projects",
+      "AI ethics and policy studies"
+    ]
+  },
+  {
+    "name": "B.Sc. Data Analytics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Undergraduate program focusing on data analysis and interpretation.",
+    "features": [
+      "Statistical analysis courses",
+      "Data visualization tools training",
+      "Practical data projects"
+    ]
+  },
+  {
+    "name": "M.Tech Computer Science and Engineering",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in computer science, algorithms, and system design.",
+    "features": [
+      "High-level programming projects",
+      "Research in advanced computing",
+      "AI and data analytics modules"
+    ]
+  },
+  {
+    "name": "B.Tech Aerospace Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Study of aircraft and spacecraft design, aerodynamics, and propulsion.",
+    "features": [
+      "Aerodynamics labs",
+      "Flight mechanics training",
+      "Space technology exposure"
+    ]
+  },
+  {
+    "name": "B.A. Journalism and Mass Communication",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Comprehensive study in journalism, media, and communication theories.",
+    "features": [
+      "News reporting workshops",
+      "Media production labs",
+      "Internships with media houses"
     ]
   }
-];
+]
+
   
 function renderFeaturedCourses() {
   featuredContainer.innerHTML = '';
@@ -1263,7 +1936,6 @@ function renderFeaturedCourses() {
       "Hands-on historical case studies"
     ]
   },
-
   {
     "name": "M.Sc. Biochemistry",
     "category": "masters",
@@ -1337,7 +2009,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. English",
+    "name": "M A English",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1349,7 +2021,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. History",
+    "name": "M A History",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1361,7 +2033,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. Political Science",
+    "name": "M A Political Science",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1385,7 +2057,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. Economics",
+    "name": "M A Economics",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1408,7 +2080,6 @@ function renderFeaturedCourses() {
       "Industrial applications of microbiology"
     ]
   },
-
   {
     "name": "B.A. Malayalam",
     "category": "bachelors",
@@ -1446,7 +2117,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. Hindi",
+    "name": "M A Hindi",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1458,7 +2129,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.A. Sanskrit",
+    "name": "M A Sanskrit",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1494,7 +2165,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "B.C.A.",
+    "name": "B C A",
     "category": "bachelors",
     "time": "3 years",
     "featured": false,
@@ -1506,7 +2177,7 @@ function renderFeaturedCourses() {
     ]
   },
   {
-    "name": "M.C.A.",
+    "name": "M C A",
     "category": "masters",
     "time": "2 years",
     "featured": false,
@@ -1516,9 +2187,350 @@ function renderFeaturedCourses() {
       "System architecture and design",
       "Projects in AI, cloud computing, and cybersecurity"
     ]
-  }
+  },
+  {
+    "name": "M S W Master of Social Work",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in social work and community development.",
+    "features": [
+      "Fieldwork experience",
+      "Research projects",
+      "Community engagement initiatives"
+    ]
+  },
+  {
+    "name": "B S W Bachelor of Social Work",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Undergraduate program in social work and community services.",
+    "features": [
+      "Social work theory",
+      "Practical internships",
+      "Community service projects"
+    ]
+  },
+  {
+    "name": "M.Sc. Environmental Science",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Study of environmental systems and sustainable practices.",
+    "features": [
+      "Environmental impact assessments",
+      "Sustainability projects",
+      "Research in ecosystem management"
+    ]
+  },
+  {
+    "name": "B.Tech Mechanical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Comprehensive study of mechanical systems and engineering principles.",
+    "features": [
+      "Thermodynamics and fluid mechanics",
+      "CAD and CAM training",
+      "Industrial internships"
+    ]
+  },
+  {
+    "name": "B.Tech Electrical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on electrical systems, circuits, and power engineering.",
+    "features": [
+      "Circuit design and analysis",
+      "Power systems training",
+      "Hands-on lab projects"
+    ]
+  },
+  {
+    "name": "M.Tech Robotics and Automation",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in robotics, automation, and intelligent systems.",
+    "features": [
+      "Robotics design and programming",
+      "Automation systems projects",
+      "AI integration in robotics"
+    ]
+  },
+  {
+    "name": "BBA Bachelor of Business Administration",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Undergraduate program in business management and administration.",
+    "features": [
+      "Business strategy courses",
+      "Leadership and management training",
+      "Internships with leading companies"
+    ]
+  },
+  {
+    "name": "M.B.A. General Management",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Comprehensive MBA program focusing on general management skills.",
+    "features": [
+      "Strategic management workshops",
+      "Global business simulations",
+      "Leadership development programs"
+    ]
+  },
+  {
+    "name": "M S W Clinical Social Work",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized program in clinical social work and therapy.",
+    "features": [
+      "Clinical counseling techniques",
+      "Therapeutic practice sessions",
+      "Mental health research projects"
+    ]
+  },
+  {
+    "name": "B S W Community Development",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on community development and social initiatives.",
+    "features": [
+      "Community needs assessment",
+      "Project management training",
+      "Fieldwork in diverse communities"
+    ]
+  },
+  {
+    "name": "M.Sc. Biotechnology",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in biotechnology and its applications.",
+    "features": [
+      "Genetic engineering projects",
+      "Bioprocessing techniques",
+      "Research in biomedical applications"
+    ]
+  },
+  {
+    "name": "B.Tech Chemical Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Comprehensive study of chemical processes and engineering principles.",
+    "features": [
+      "Process design and simulation",
+      "Chemical reaction engineering",
+      "Industrial internships"
+    ]
+  },
+  {
+    "name": "B.Tech Computer Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Focus on computer systems, hardware, and software integration.",
+    "features": [
+      "Embedded systems design",
+      "Hardware-software co-design",
+      "Hands-on lab projects"
+    ]
+  },
+  {
+    "name": "M.Sc. Artificial Intelligence",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Specialized program in artificial intelligence and machine learning.",
+    "features": [
+      "Advanced AI algorithms",
+      "Machine learning projects",
+      "AI ethics and policy studies"
+    ]
+  },
+  {
+    "name": "B.Sc. Data Analytics",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Undergraduate program focusing on data analysis and interpretation.",
+    "features": [
+      "Statistical analysis courses",
+      "Data visualization tools training",
+      "Practical data projects"
+    ]
+  },
+
+  /* --- NEW POPULAR COURSES ADDED BELOW --- */
+
+  {
+    "name": "B.Sc. Nursing",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": false,
+    "description": "Study of patient care, medical fundamentals, and healthcare practices.",
+    "features": [
+      "Clinical rotations",
+      "Anatomy and physiology training",
+      "Hands-on patient care experience"
+    ]
+  },
+  {
+    "name": "B.D.S. (Bachelor of Dental Surgery)",
+    "category": "bachelors",
+    "time": "5 years",
+    "featured": false,
+    "description": "Focus on oral health, dental surgery, and patient care.",
+    "features": [
+      "Dental procedures training",
+      "Clinical internships",
+      "Advanced dental technology exposure"
+    ]
+  },
+  {
+    "name": "B.Pharm",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": false,
+    "description": "Study of pharmacy, pharmaceuticals, and drug development.",
+    "features": [
+      "Pharmacology training",
+      "Lab-based pharmaceutical studies",
+      "Clinical practice sessions"
+    ]
+  },
+  {
+    "name": "M.Pharm",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced study in pharmaceutical sciences and research.",
+    "features": [
+      "Drug formulation projects",
+      "Pharmacological research",
+      "Industry-based internships"
+    ]
+  },
+  {
+    "name": "LL.B. (Bachelor of Laws)",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": true,
+    "description": "Professional legal education leading to a law degree.",
+    "features": [
+      "Case law studies",
+      "Moot court practice",
+      "Legal research projects"
+    ]
+  },
+  {
+    "name": "LL.M. (Master of Laws)",
+    "category": "masters",
+    "time": "2 years",
+    "featured": false,
+    "description": "Advanced legal specialization and research.",
+    "features": [
+      "Specialized legal modules",
+      "Research dissertations",
+      "Legal clinic experiences"
+    ]
+  },
+  {
+    "name": "M.Tech Computer Science and Engineering",
+    "category": "masters",
+    "time": "2 years",
+    "featured": true,
+    "description": "Advanced study in computer science, algorithms, and system design.",
+    "features": [
+      "High-level programming projects",
+      "Research in advanced computing",
+      "AI and data analytics modules"
+    ]
+  },
+  {
+    "name": "B.Tech Aerospace Engineering",
+    "category": "bachelors",
+    "time": "4 years",
+    "featured": true,
+    "description": "Study of aircraft and spacecraft design, aerodynamics, and propulsion.",
+    "features": [
+      "Aerodynamics labs",
+      "Flight mechanics training",
+      "Space technology exposure"
+    ]
+  },
+  {
+    "name": "B.A. Journalism and Mass Communication",
+    "category": "bachelors",
+    "time": "3 years",
+    "featured": false,
+    "description": "Comprehensive study in journalism, media, and communication theories.",
+    "features": [
+      "News reporting workshops",
+      "Media production labs",
+      "Internships with media houses"
+    ]
+  },
+  {
+    "name": "Ph.D. in Computer Science",
+    "category": "doctoral",
+    "time": "3-5 years",
+    "featured": false,
+    "description": "Research-intensive doctoral program in computer science.",
+    "features": [
+      "Cutting-edge research projects",
+      "Publication in journals and conferences",
+      "Advanced specialization in AI, systems, or data science"
+    ]
+  },
+  {
+    "name": "Ph.D. in Management",
+    "category": "doctoral",
+    "time": "3-5 years",
+    "featured": false,
+    "description": "Doctoral research in business management and administration.",
+    "features": [
+      "Advanced business research",
+      "Dissertation and defense",
+      "Industry and academic collaboration"
+    ]
+  },
+  {
+    "name": "Ph.D. in Physics",
+    "category": "doctoral",
+    "time": "3-5 years",
+    "featured": false,
+    "description": "Advanced research on theoretical and experimental physics.",
+    "features": [
+      "Novel physics research projects",
+      "Collaborations with research labs",
+      "Conference presentations"
+    ]
+  },
+  {
+  "name": "B Com",
+  "category": "bachelors",
+  "time": "3 years",
+  "featured": true,
+  "description": "Honours degree focusing on advanced commerce concepts.",
+  "features": [
+    "Accounting and finance modules",
+    "Advanced economics studies",
+    "Preparation for corporate careers"
+  ]
+}
 
 ]
+
+
 
 
 
